@@ -21,7 +21,12 @@
       align-items: center;
       font-family: "Jersey 10", sans-serif;
       font-weight: 400;
-      font-style: normal;
+    }
+
+    .logo {
+      width: 180px;
+      margin-bottom: 18px;
+      image-rendering: pixelated;
     }
 
     .title {
@@ -43,23 +48,43 @@
       margin-top: 25px;
       background: #00d5ff;
       color: #000;
-      padding: 12px 24px;
+      padding: 12px 28px;
       border-radius: 999px;
-      font-size: 18px;
+      font-size: 20px;
       text-decoration: none;
-      cursor: default;
       user-select: none;
       transition: transform 0.1s ease;
+      display: inline-block;
+    }
+
+    .button:hover {
+      transform: scale(1.03);
     }
 
     .button:active {
       transform: scale(0.97);
     }
+
+    .release {
+      margin-top: 14px;
+      color: white;
+      opacity: 0.8;
+      font-size: 18px;
+    }
   </style>
 </head>
 <body>
+
+  <img src="logo.png" alt="BulletBox Logo" class="logo">
+
   <div class="title">BULLETBOX</div>
   <div class="subtitle">The best 2d pvp game you'll ever play</div>
-  <div class="button">Releasing May 1st</div>
+
+  <a class="button" href="https://discord.gg/cSffQ6bNf6" target="_blank">
+    Join the Discord
+  </a>
+
+  <div class="release">Releasing May 1st</div>
+
 </body>
 </html>
