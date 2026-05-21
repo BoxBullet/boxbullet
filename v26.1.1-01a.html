@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BulletBox Patch Notes - 26.1.1-01a</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&family=Jersey+10&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #000;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: "Jersey 10", sans-serif;
+      font-weight: 400;
+      color: #fff;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      max-width: 700px;
+      padding: 40px 20px;
+      box-sizing: border-box;
+    }
+
+    .logo {
+      width: 140px;
+      margin-bottom: 10px;
+      image-rendering: pixelated;
+    }
+
+    .title {
+      color: #FFD400;
+      font-size: 54px;
+      letter-spacing: 2px;
+      line-height: 1;
+      text-decoration: none;
+    }
+
+    .subtitle {
+      color: #00d5ff;
+      font-size: 22px;
+      margin-top: 5px;
+      margin-bottom: 35px;
+      opacity: 0.9;
+      text-align: center;
+    }
+
+    .back-btn {
+      color: #00d5ff;
+      font-size: 20px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 20px;
+      align-self: flex-start;
+    }
+
+    .back-btn:hover {
+      text-decoration: underline;
+    }
+
+    .content-box {
+      background: #111;
+      border: 2px solid #222;
+      border-radius: 8px;
+      padding: 25px;
+      margin-bottom: 20px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .patch-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      border-bottom: 2px solid #222;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
+
+    .patch-title {
+      font-size: 32px;
+      color: #FFD400;
+      letter-spacing: 1px;
+    }
+
+    .patch-status {
+      font-size: 20px;
+      color: #ff3b30;
+    }
+
+    .section-title {
+      color: #00d5ff;
+      font-size: 24px;
+      margin-top: 20px;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .section-title:first-of-type {
+      margin-top: 0;
+    }
+
+    ul {
+      margin: 0 0 20px 0;
+      padding-left: 20px;
+    }
+
+    li {
+      font-size: 19px;
+      line-height: 1.4;
+      margin-bottom: 8px;
+      color: #eee;
+    }
+
+    li strong {
+      color: #fff;
+    }
+
+    .discord-btn {
+      background: #00d5ff;
+      color: #000;
+      padding: 12px 28px;
+      border-radius: 999px;
+      font-size: 20px;
+      text-decoration: none;
+      user-select: none;
+      transition: transform 0.1s ease;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .discord-btn:hover {
+      transform: scale(1.03);
+    }
+
+    .icon {
+      width: 20px;
+      height: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <img src="logo.png" alt="BulletBox Logo" class="logo">
+    <a href="index.html" class="title">BULLETBOX</a>
+    <div class="subtitle">The New Class Architecture</div>
+
+    <a href="updates.html" class="back-btn">&lt; Back to Patch Notes</a>
+
+    <div class="content-box">
+      <div class="patch-header">
+        <div class="patch-title">Bulletbox 26.1.1-01a</div>
+        <div class="patch-status">Alpha Unreleased</div>
+      </div>
+      
+      <div class="section-title">Architecture File Breakdown</div>
+      <ul>
+        <li><strong>Program:</strong> This is the entry point and the "Brain" of the game. It holds the global state machine (GameState) and the main loop. Its only job is to ask the SaveManager if a user exists at startup and then tell the active screen to update and draw every frame.</li>
+        <li><strong>HomeScreen:</strong> This is the primary menu hub. It handles the title, the main buttons (Play, Mods, Options, Quit), and most importantly, it owns the "Static" GameOfLife background. By making the background static here, every other class in the game can access and draw it without needing to create their own copy.</li>
+        <li><strong>UIButton:</strong> The base for all interactive text. Instead of using standard boxes, this class calculates a hitbox based on text size. It uses a "Lerp" (Linear Interpolation) formula to smoothly scale the text up and brighten it whenever the mouse is hovering, giving the menu a "liquid" feel.</li>
+        <li><strong>LoginScreen:</strong> Handles the credential entry. It uses a character buffer to capture typing and manages "Focus" logic—allowing you to click between the Username and Password fields. It also features conditional rendering to hide placeholder text the moment you start typing.</li>
+        <li><strong>GameOfLife:</strong> The background simulation engine. It runs the logic for the cells and uses a Queue to keep a history of the last 3 frame counts. If the "Live Cell" count stays the same for too long (stagnation), it triggers a board reset to keep the background from ever staying still.</li>
+        <li><strong>SaveManager:</strong> The I/O utility. It handles the bridge between the game and the hard drive. It turns the UserData class into a JSON string and writes it to user_data.json, and handles the logic for reading that file back in so the user stays logged in.</li>
+        <li><strong>UserData:</strong> A simple data container. It holds the Username, Password, and a boolean for HasLoggedIn. This is the object that the SaveManager serializes to disk.</li>
+      </ul>
+
+      <div class="section-title">Summary of Changes</div>
+      <ul>
+        <li><strong>Decoupling:</strong> Moved away from the 2,000-line Java Client.java mess into a modular system where every feature has its own dedicated file.</li>
+        <li><strong>State Control:</strong> Implemented a formal State Machine in Program.cs to handle transitions between the Menu, Login, and the (currently black) Server Selector.</li>
+        <li><strong>Persistence:</strong> Added a JSON-based save system so the login process only happens once per user.</li>
+        <li><strong>Visual Polish:</strong> Created a "hover-glow" effect for buttons and a self-healing background simulation that prevents the menu from ever looking "frozen."</li>
+      </ul>
+    </div>
+
+    <a class="discord-btn" href="https://discord.gg/cSffQ6bNf6" target="_blank">
+      <svg class="icon" viewBox="0 0 127.14 96.36" fill="currentColor">
+        <path d="M107.7,8.07A105.15,105.15,0,0,0,77.26,0a77.19,77.19,0,0,0-3.3,6.83A96.67,96.67,0,0,0,53.22,6.83,77.19,77.19,0,0,0,49.88,0,105.15,105.15,0,0,0,19.44,8.07C3.66,31.58-1.86,54.65,1,77.53A105.73,105.73,0,0,0,32,96.36a74.37,74.37,0,0,0,6.71-11,68.6,68.6,0,0,1-10.57-5c.88-.65,1.72-1.33,2.53-2a75.49,75.49,0,0,0,65.78,0c.81.71,1.65,1.39,2.53,2a68.6,68.6,0,0,1-10.57,5,74.37,74.37,0,0,0,6.71,11,105.73,105.73,0,0,0,31-18.83C130.65,49.13,124.71,26.23,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53S36.18,40.36,42.45,40.36,53.87,46,53.87,53,48.72,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.24,60,73.24,53S78.41,40.36,84.69,40.36,96.11,46,96.11,53,91,65.69,84.69,65.69Z"/>
+      </svg>
+      Join the Community Discord
+    </a>
+  </div>
+
+</body>
+</html>

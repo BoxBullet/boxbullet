@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BulletBox Patch Notes - 26.1.1-01d</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&family=Jersey+10&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #000;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: "Jersey 10", sans-serif;
+      font-weight: 400;
+      color: #fff;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      max-width: 700px;
+      padding: 40px 20px;
+      box-sizing: border-box;
+    }
+
+    .logo {
+      width: 140px;
+      margin-bottom: 10px;
+      image-rendering: pixelated;
+    }
+
+    .title {
+      color: #FFD400;
+      font-size: 54px;
+      letter-spacing: 2px;
+      line-height: 1;
+      text-decoration: none;
+    }
+
+    .subtitle {
+      color: #00d5ff;
+      font-size: 22px;
+      margin-top: 5px;
+      margin-bottom: 35px;
+      opacity: 0.9;
+      text-align: center;
+    }
+
+    .back-btn {
+      color: #00d5ff;
+      font-size: 20px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 20px;
+      align-self: flex-start;
+    }
+
+    .back-btn:hover {
+      text-decoration: underline;
+    }
+
+    .content-box {
+      background: #111;
+      border: 2px solid #222;
+      border-radius: 8px;
+      padding: 25px;
+      margin-bottom: 20px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .patch-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      border-bottom: 2px solid #222;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
+
+    .patch-title {
+      font-size: 32px;
+      color: #FFD400;
+      letter-spacing: 1px;
+    }
+
+    .patch-status {
+      font-size: 20px;
+      color: #ff3b30;
+    }
+
+    .section-title {
+      color: #00d5ff;
+      font-size: 24px;
+      margin-top: 20px;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .section-title:first-of-type {
+      margin-top: 0;
+    }
+
+    ul {
+      margin: 0 0 20px 0;
+      padding-left: 20px;
+    }
+
+    li {
+      font-size: 19px;
+      line-height: 1.4;
+      margin-bottom: 8px;
+      color: #eee;
+    }
+
+    li strong {
+      color: #fff;
+    }
+
+    .discord-btn {
+      background: #00d5ff;
+      color: #000;
+      padding: 12px 28px;
+      border-radius: 999px;
+      font-size: 20px;
+      text-decoration: none;
+      user-select: none;
+      transition: transform 0.1s ease;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .discord-btn:hover {
+      transform: scale(1.03);
+    }
+
+    .icon {
+      width: 20px;
+      height: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <img src="logo.png" alt="BulletBox Logo" class="logo">
+    <a href="index.html" class="title">BULLETBOX</a>
+    <div class="subtitle">The Dynamic Geometry & Camera Stabilization Update</div>
+
+    <a href="updates.html" class="back-btn">&lt; Back to Patch Notes</a>
+
+    <div class="content-box">
+      <div class="patch-header">
+        <div class="patch-title">Bulletbox 26.1.1-01d</div>
+        <div class="patch-status">Alpha Unreleased</div>
+      </div>
+
+      <div class="section-title">Dynamic Player Rendering</div>
+      <ul>
+        <li><strong>Procedural Nested Model:</strong> Replaced static image-based textures with a dynamic system of nested spinning rounded squares.</li>
+        <li><strong>Dual-Axis Rotation:</strong> Implemented counter-clockwise rotation for the external Deep Green shape and clockwise rotation for the internal Magenta shape.</li>
+        <li><strong>Shape Template System:</strong> Developed a "Texture Template" workflow to render high-quality rounded rectangles into a cache, enabling rotation of rounded corners without relying on the <code>rlgl</code> matrix stack.</li>
+        <li><strong>Pixelation Filter:</strong> Integrated a 24x24 pixelation pass using <code>RenderTexture2D</code> with <code>Point</code> filtering to achieve a stylized, low-resolution aesthetic.</li>
+      </ul>
+
+      <div class="section-title">Camera & Matrix Optimization</div>
+      <ul>
+        <li><strong>Frame-Rate Independent Lerp:</strong> Upgraded the camera tracking logic using exponential decay math, ensuring smooth movement that feels consistent regardless of the user's FPS.</li>
+        <li><strong>Matrix Conflict Resolution:</strong> Relocated the pixelation render pass from the <code>Draw</code> loop to the <code>Update</code> loop. This prevents <code>BeginTextureMode</code> from resetting the camera’s 2D transform, ensuring the player remains perfectly centered in the viewport.</li>
+        <li><strong>Enhanced Centering:</strong> Increased <code>LerpSpeed</code> from 10.0 to 25.0 to provide tighter, more responsive camera tracking during high-velocity movement and knockback events.</li>
+      </ul>
+
+      <div class="section-title">Multiplayer & UI Improvements</div>
+      <ul>
+        <li><strong>Instance-Unique Rendering:</strong> Refactored static texture buffers into per-instance properties, ensuring that multiple players on screen can maintain unique rotation states and colors without visual ghosting.</li>
+        <li><strong>UI Layering:</strong> Restored high-resolution name tags and health bars, drawing them after the pixelation pass to maintain readability over the stylized player model.</li>
+        <li><strong>Pause Menu Connectivity:</strong> Implemented a functional "Disconnect" button in the <code>PauseMenu</code> to allow for clean session termination and network cleanup.</li>
+      </ul>
+
+      <div class="section-title">Code Cleanup & Refactoring</div>
+      <ul>
+        <li><strong>Texture Removal:</strong> Stripped all legacy texture-loading code related to <code>player_idle</code> and <code>enemy_idle</code> from <code>Playing.cs</code> and <code>AssetManager</code>.</li>
+        <li><strong>Safe Null-Checking:</strong> Added null-conditional operators to the <code>PauseMenu</code> to prevent crashes when accessing the game state during transitions.</li>
+        <li><strong>Namespace Optimization:</strong> Standardized the use of <code>System.Numerics</code> and <code>Raylib_cs</code> across all core game modules.</li>
+      </ul>
+    </div>
+
+    <a class="discord-btn" href="https://discord.gg/cSffQ6bNf6" target="_blank">
+      <svg class="icon" viewBox="0 0 127.14 96.36" fill="currentColor">
+        <path d="M107.7,8.07A105.15,105.15,0,0,0,77.26,0a77.19,77.19,0,0,0-3.3,6.83A96.67,96.67,0,0,0,53.22,6.83,77.19,77.19,0,0,0,49.88,0,105.15,105.15,0,0,0,19.44,8.07C3.66,31.58-1.86,54.65,1,77.53A105.73,105.73,0,0,0,32,96.36a74.37,74.37,0,0,0,6.71-11,68.6,68.6,0,0,1-10.57-5c.88-.65,1.72-1.33,2.53-2a75.49,75.49,0,0,0,65.78,0c.81.71,1.65,1.39,2.53,2a68.6,68.6,0,0,1-10.57,5,74.37,74.37,0,0,0,6.71,11,105.73,105.73,0,0,0,31-18.83C130.65,49.13,124.71,26.23,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53S36.18,40.36,42.45,40.36,53.87,46,53.87,53,48.72,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.24,60,73.24,53S78.41,40.36,84.69,40.36,96.11,46,96.11,53,91,65.69,84.69,65.69Z"/>
+      </svg>
+      Join the Community Discord
+    </a>
+  </div>
+
+</body>
+</html>
