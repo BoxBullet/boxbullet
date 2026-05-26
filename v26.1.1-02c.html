@@ -1,0 +1,381 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BulletBox Patch Notes - 26.1.1-02c</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&family=Jersey+10&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #000;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: "Jersey 10", sans-serif;
+      font-weight: 400;
+      color: #fff;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      max-width: 700px;
+      padding: 40px 20px;
+      box-sizing: border-box;
+    }
+
+    .logo {
+      width: 140px;
+      margin-bottom: 10px;
+      image-rendering: pixelated;
+    }
+
+    .title {
+      color: #FFD400;
+      font-size: 54px;
+      letter-spacing: 2px;
+      line-height: 1;
+      text-decoration: none;
+    }
+
+    .subtitle {
+      color: #00d5ff;
+      font-size: 22px;
+      margin-top: 5px;
+      margin-bottom: 35px;
+      opacity: 0.9;
+      text-align: center;
+    }
+
+    .back-btn {
+      color: #00d5ff;
+      font-size: 20px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 20px;
+      align-self: flex-start;
+    }
+
+    .back-btn:hover {
+      text-decoration: underline;
+    }
+
+    .content-box {
+      background: #111;
+      border: 2px solid #222;
+      border-radius: 8px;
+      padding: 25px;
+      margin-bottom: 20px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .patch-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      border-bottom: 2px solid #222;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
+
+    .patch-title {
+      font-size: 32px;
+      color: #FFD400;
+      letter-spacing: 1px;
+    }
+
+    .patch-status {
+      font-size: 20px;
+      color: #ff3b30;
+    }
+
+    .section-title {
+      color: #00d5ff;
+      font-size: 24px;
+      margin-top: 20px;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .section-title:first-of-type {
+      margin-top: 0;
+    }
+
+    ul {
+      margin: 0 0 20px 0;
+      padding-left: 20px;
+    }
+
+    li {
+      font-size: 19px;
+      line-height: 1.4;
+      margin-bottom: 8px;
+      color: #eee;
+    }
+
+    li strong {
+      color: #fff;
+    }
+
+    .discord-btn {
+      background: #00d5ff;
+      color: #000;
+      padding: 12px 28px;
+      border-radius: 999px;
+      font-size: 20px;
+      text-decoration: none;
+      user-select: none;
+      transition: transform 0.1s ease;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .discord-btn:hover {
+      transform: scale(1.03);
+    }
+
+    .download-btn {
+        background: #FFD400;
+        color: #000;
+        padding: 12px 28px;
+        border-radius: 999px;
+        font-size: 20px;
+        text-decoration: none;
+        user-select: none;
+        transition: transform 0.1s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 18px;
+        }
+
+        .download-btn:hover {
+        transform: scale(1.03);
+        }
+
+    .icon {
+      width: 20px;
+      height: 20px;
+    }
+
+    code {
+      background: #1b1b1b;
+      padding: 2px 5px;
+      border-radius: 4px;
+      color: #FFD400;
+      font-size: 16px;
+    }
+
+    .image-wrapper {
+      position: relative;
+      margin-top: 15px;
+      margin-bottom: 25px;
+    }
+
+    .image-label {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: rgba(0,0,0,0.75);
+      border: 2px solid #FFD400;
+      color: #FFD400;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 24px;
+      letter-spacing: 1px;
+      z-index: 2;
+    }
+
+    .leak-image {
+      width: 100%;
+      max-width: 100%;
+      border: 2px solid #222;
+      border-radius: 6px;
+      image-rendering: pixelated;
+      display: block;
+      margin-bottom: 18px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <img src="logo.png" alt="BulletBox Logo" class="logo">
+
+    <a href="index.html" class="title">BULLETBOX</a>
+    <div class="subtitle">The Singleplayer Update</div>
+
+    <a href="updates.html" class="back-btn">&lt; Back to Patch Notes</a>
+
+    <div class="content-box">
+
+      <div class="patch-header">
+        <div class="patch-title">Bulletbox 26.1.1-02c</div>
+        <div class="patch-status">In Beta Testing!</div>
+      </div>
+
+      <div class="section-title">Fixes</div>
+
+      <ul>
+        <li>
+          The game will now ask for permission to open to LAN again if the permission was denied. (26.1.1-02c.1/1)
+        </li>
+
+        <li>
+          Your options now get saved automatically. (26.1.1-02c.1/2)
+        </li>
+
+        <li>
+          The game now pauses when on pause screens or options screens, unless LAN is opened. (26.1.1-02c.1/3)
+        </li>
+
+        <li>
+          The server will now pause when on pause screens or options screens, unless LAN is opened. (26.1.1-02c.1/4)
+        </li>
+      </ul>
+
+      <div class="section-title">Visual Bugs</div>
+
+      <ul>
+        <li>
+          Your render distance now gets dynamically increased to fill your screen. (26.1.1-02c.2/1)
+        </li>
+
+        <li>
+          Biome blending has bee reduced to 3x3 intead of 5x5. (26.1.1-02c.2/2)
+        </li>
+
+        <li>
+          The biome blending reshesh timer has been removed. (26.1.1-02c.2/3)
+        </li>
+      </ul>
+
+      <div class="section-title">Boss Bars & Health Bars</div>
+
+      <ul>
+        <li>
+          The raid bossbar now is calculated using the sum of the health of all raiders divided by the total number of raiders that the raid initially consisted off. (26.1.1-02c.3/1)
+        </li>
+
+        <li>
+          The health bars above players and raiders have been fixed. (26.1.1-02c.3/2)
+        </li>
+
+        <li>
+          The health bars above players and raiders have been replaced with the same hearts used to indicate your own health above your hotbar, but out of 3 instead of 10. (26.1.1-02c.3/3)
+        </li>
+
+        <li>
+          The health bar above your hotbar has been enlarged. (26.1.1-02c.3/4)
+        </li>
+      </ul>
+
+      <div class="section-title">Raids</div>
+
+      <ul>
+        <li>
+          The raid bossbar is now drawn round and renamed to "RAID ENCOUNTER." (26.1.1-02c.4/1)
+        </li>
+
+        <li>
+          Raiders now take advantage of 90% of the range of their weapons. (26.1.1-02c.4/2)
+        </li>
+
+        <li>
+          Raids no longer start every 60 seconds, and now start every 40-60 seconds. (26.1.1-02c.4/3)
+        </li>
+
+        <li>
+          <code>resources/sounds/raid/raid_horn.mp3</code> now plays at the start of each raid. (26.1.1-02c.4/4)
+        </li>
+
+        <li>
+          Spear-holding raiders are now only a 2% chance, and kanabo-holding raiders are 8%. (26.1.1-02c.4/5)
+        </li>
+
+        <li>
+          Raids now end when the player dies. (26.1.1-02c.4/6)
+        </li>
+      </ul>
+
+      <div class="section-title">Miscellaneous</div>
+
+      <ul>
+        <li>
+          Removed Multiplayer. (26.1.1-02c.5/1)
+        </li>
+
+        <li>
+          Removed "| C# Edition" from the title. (26.1.1-02c.5/2)
+        </li>
+
+        <li>
+          The mouse has been replaced with a plus-sign crosshair that is green when you are clicking in range and red when out of range or uncharged. (26.1.1-02c.5/3)
+        </li>
+
+        <li>
+          The crosshair color changes slightly to be more obvious based on what it is hovering over. (26.1.1-02c.5/4)
+        </li>
+
+        <li>
+          Added a disconnected screen. (26.1.1-02c.5/5)
+        </li>
+
+        <li>
+          Added a death screen. (26.1.1-02c.5/6)
+        </li>
+
+        <li>
+          Added a new AudioManager class. (26.1.1-02c.5/7)
+        </li>
+      </ul>
+
+      <div class="section-title">Shields</div>
+
+      <ul>
+        <li>
+          The shield texture has been properly rotated. (26.1.1-02c.6/1)
+        </li>
+
+        <li>
+          Shields now block 90% instead of 80% of all incoming damage when being raised. (26.1.1-02c.6/2)
+        </li>
+
+        <li>
+          Shields now slow you down by 45% instead of 50% when being raised. (26.1.1-02c.6/3)
+        </li>
+
+        <li>
+          <code>resources/sounds/item/shield/block_1.mp3</code> now plays when a shield blocks an attack. (26.1.1-02c.6/4)
+        </li>
+      </ul>
+
+      <a class="download-btn" href="https://leonardodecapitan.itch.io/bulletbox" target="_blank">Download for BETA TESTING</a>
+
+    </div>
+
+    <a class="discord-btn" href="https://discord.gg/jUuZvfVpAw" target="_blank">
+      <svg class="icon" viewBox="0 0 127.14 96.36" fill="currentColor">
+        <path d="M107.7,8.07A105.15,105.15,0,0,0,77.26,0a77.19,77.19,0,0,0-3.3,6.83A96.67,96.67,0,0,0,53.22,6.83,77.19,77.19,0,0,0,49.88,0,105.15,105.15,0,0,0,19.44,8.07C3.66,31.58-1.86,54.65,1,77.53A105.73,105.73,0,0,0,32,96.36a74.37,74.37,0,0,0,6.71-11,68.6,68.6,0,0,1-10.57-5c.88-.65,1.72-1.33,2.53-2a75.49,75.49,0,0,0,65.78,0c.81.71,1.65,1.39,2.53,2a68.6,68.6,0,0,1-10.57,5,74.37,74.37,0,0,0,6.71,11,105.73,105.73,0,0,0,31-18.83C130.65,49.13,124.71,26.23,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53S36.18,40.36,42.45,40.36,53.87,46,53.87,53,48.72,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.24,60,73.24,53S78.41,40.36,84.69,40.36,96.11,46,96.11,53,91,65.69,84.69,65.69Z"/>
+      </svg>
+      Join the Community Discord
+    </a>
+
+  </div>
+
+</body>
+</html>

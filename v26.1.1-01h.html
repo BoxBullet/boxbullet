@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BulletBox Patch Notes - 26.1.1-01h</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&family=Jersey+10&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #000;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: "Jersey 10", sans-serif;
+      font-weight: 400;
+      color: #fff;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      max-width: 700px;
+      padding: 40px 20px;
+      box-sizing: border-box;
+    }
+
+    .logo {
+      width: 140px;
+      margin-bottom: 10px;
+      image-rendering: pixelated;
+    }
+
+    .title {
+      color: #FFD400;
+      font-size: 54px;
+      letter-spacing: 2px;
+      line-height: 1;
+      text-decoration: none;
+    }
+
+    .subtitle {
+      color: #00d5ff;
+      font-size: 22px;
+      margin-top: 5px;
+      margin-bottom: 35px;
+      opacity: 0.9;
+      text-align: center;
+    }
+
+    .back-btn {
+      color: #00d5ff;
+      font-size: 20px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 20px;
+      align-self: flex-start;
+    }
+
+    .back-btn:hover {
+      text-decoration: underline;
+    }
+
+    .content-box {
+      background: #111;
+      border: 2px solid #222;
+      border-radius: 8px;
+      padding: 25px;
+      margin-bottom: 20px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .patch-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      border-bottom: 2px solid #222;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
+
+    .patch-title {
+      font-size: 32px;
+      color: #FFD400;
+      letter-spacing: 1px;
+    }
+
+    .patch-status {
+      font-size: 20px;
+      color: #ff3b30;
+    }
+
+    .section-title {
+      color: #00d5ff;
+      font-size: 24px;
+      margin-top: 20px;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .section-title:first-of-type {
+      margin-top: 0;
+    }
+
+    ul {
+      margin: 0 0 20px 0;
+      padding-left: 20px;
+    }
+
+    li {
+      font-size: 19px;
+      line-height: 1.4;
+      margin-bottom: 8px;
+      color: #eee;
+    }
+
+    li strong {
+      color: #fff;
+    }
+
+    .discord-btn {
+      background: #00d5ff;
+      color: #000;
+      padding: 12px 28px;
+      border-radius: 999px;
+      font-size: 20px;
+      text-decoration: none;
+      user-select: none;
+      transition: transform 0.1s ease;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .discord-btn:hover {
+      transform: scale(1.03);
+    }
+
+    .icon {
+      width: 20px;
+      height: 20px;
+    }
+
+    code {
+      background: #1b1b1b;
+      padding: 2px 5px;
+      border-radius: 4px;
+      color: #FFD400;
+      font-size: 16px;
+    }
+
+    .image-wrapper {
+      position: relative;
+      margin-top: 15px;
+      margin-bottom: 25px;
+    }
+
+    .image-label {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: rgba(0,0,0,0.75);
+      border: 2px solid #FFD400;
+      color: #FFD400;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 24px;
+      letter-spacing: 1px;
+      z-index: 2;
+    }
+
+    .leak-image {
+      width: 100%;
+      max-width: 100%;
+      border: 2px solid #222;
+      border-radius: 6px;
+      image-rendering: pixelated;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <img src="logo.png" alt="BulletBox Logo" class="logo">
+    <a href="index.html" class="title">BULLETBOX</a>
+    <div class="subtitle">World Generation & Biome Blending Update</div>
+
+    <a href="updates.html" class="back-btn">&lt; Back to Patch Notes</a>
+
+    <div class="content-box">
+      <div class="patch-header">
+        <div class="patch-title">Bulletbox 26.1.1-01h</div>
+        <div class="patch-status">Alpha Unreleased</div>
+      </div>
+
+      <div class="section-title">Biome Expansion & Distribution Rework</div>
+      <ul>
+        <li><strong>Reduced Forest Dominance:</strong> Reworked biome distribution logic to better account for the Gaussian distribution of Perlin noise, reducing the overwhelming prevalence of Forest regions. (26.1.1-01h.1/1)</li>
+
+        <li><strong>Expanded Rare Biome Thresholds:</strong> Narrowed center-range biome thresholds while expanding extreme-value ranges, significantly increasing the appearance rate of uncommon terrain types. (26.1.1-01h.1/2)</li>
+
+        <li><strong>Ocean Biome Generation:</strong> Added ultra low-frequency ocean noise generation (<code>0.003f</code>) to create massive contiguous oceans spanning large portions of the world. (26.1.1-01h.1/3)</li>
+
+        <li><strong>Beach Biome Integration:</strong> Implemented Beach generation around ocean borders to create smoother coastline transitions between land and water. (26.1.1-01h.1/4)</li>
+
+        <li><strong>Desert Biome Rebalancing:</strong> Desert biomes now share equal land-mass generation priority with Forest and Meadow regions. (26.1.1-01h.1/5)</li>
+
+        <li><strong>Extreme Terrain Biomes:</strong> Added rare high-contrast biome regions including Stony Peaks and Brimstone Springs generated from extreme noise thresholds. (26.1.1-01h.1/6)</li>
+
+        <li><strong>Procedural River System:</strong> Implemented Ridge Noise-based river generation using absolute-value noise sampling to produce narrow winding river paths across terrain. (26.1.1-01h.1/7)</li>
+
+        <li><strong>Biome Priority Rules:</strong> Rivers now override standard land biomes while Oceans and Beaches override river generation where overlap occurs. (26.1.1-01h.1/8)</li>
+      </ul>
+
+      <div class="section-title">Smooth Chunk Blending System</div>
+      <ul>
+        <li><strong>Client-Side Biome Blending:</strong> Implemented a custom solid-tile chunk blending system to eliminate harsh biome borders without introducing GPU-heavy blur or gradient effects. (26.1.1-01h.2/1)</li>
+
+        <li><strong>Weighted Neighbor Sampling:</strong> Chunks now calculate their blended color values by sampling neighboring chunks within a 3-chunk radius using weighted proximity calculations. (26.1.1-01h.2/2)</li>
+
+        <li><strong>Immediate Neighbor Prioritization:</strong> Radius 1 neighboring chunks now contribute with a <code>0.85</code> blend weight for stronger local terrain continuity. (26.1.1-01h.2/3)</li>
+
+        <li><strong>Extended Radius Smoothing:</strong> Radius 2 and Radius 3 neighbors now contribute with reduced <code>0.25</code> and <code>0.05</code> weights respectively for subtle large-scale smoothing. (26.1.1-01h.2/4)</li>
+
+        <li><strong>River Blend Exclusion:</strong> Rivers are now ignored entirely during neighboring chunk blending calculations to preserve crisp and clearly defined water paths. (26.1.1-01h.2/5)</li>
+
+        <li><strong>Brimstone Visual Overlay:</strong> Added a semi-transparent orange overlay tint applied above base chunk colors within Brimstone biome regions. (26.1.1-01h.2/6)</li>
+      </ul>
+
+      <div class="section-title">Performance & Optimization Improvements</div>
+      <ul>
+        <li><strong>Amortized Blend Processing:</strong> Introduced a <code>_pendingBlends</code> processing queue to distribute expensive blend calculations across multiple frames instead of processing all chunks simultaneously. (26.1.1-01h.3/1)</li>
+
+        <li><strong>Per-Frame Blend Limits:</strong> The renderer now processes a maximum of <code>500</code> chunk blend calculations per frame to maintain stable framerates during world traversal. (26.1.1-01h.3/2)</li>
+
+        <li><strong>Distance-Based Queue Prioritization:</strong> Pending blend calculations are now sorted by player proximity, ensuring chunks closest to the player visually update first. (26.1.1-01h.3/3)</li>
+
+        <li><strong>Blended Color Cache:</strong> Added <code>_blendedColorCache</code> storage to prevent redundant recalculations for unchanged chunks. (26.1.1-01h.3/4)</li>
+
+        <li><strong>Selective Recalculation Logic:</strong> Blend calculations now only re-run when neighboring chunk data changes or during scheduled refresh cycles. (26.1.1-01h.3/5)</li>
+
+        <li><strong>Viewport Frustum Culling:</strong> The <code>Draw</code> pipeline now calculates visible world-space screen bounds and skips rendering chunks outside the viewport to reduce GPU load and prevent rendering hangs. (26.1.1-01h.3/6)</li>
+
+        <li><strong>Move-Triggered Chunk Updates:</strong> Chunk loading, unloading, and cache cleanup systems now only execute when crossing chunk boundaries rather than every frame. (26.1.1-01h.3/7)</li>
+      </ul>
+
+      <div class="section-title">Reliability & Synchronization Systems</div>
+      <ul>
+        <li><strong>Automatic Cache Invalidation:</strong> Newly received chunk data now automatically triggers blend recalculations for all chunks within a 3-tile radius to maintain seamless biome transitions. (26.1.1-01h.4/1)</li>
+
+        <li><strong>Heartbeat Blend Refresh:</strong> Added a 5-second heartbeat refresh system which re-queues all currently loaded chunks for blending correction and synchronization. (26.1.1-01h.4/2)</li>
+
+        <li><strong>Stuck Tile Recovery:</strong> Heartbeat refresh logic now resolves permanently unblended or visually stale chunks caused by delayed network packets or incomplete neighbor generation during initial world loading. (26.1.1-01h.4/3)</li>
+      </ul>
+
+      <div class="section-title">Development Preview: Biome Blending</div>
+
+      <div class="image-wrapper">
+        <div class="image-label">BEFORE</div>
+        <img src="./img/01h-leak1.png" alt="Before Biome Blending" class="leak-image">
+      </div>
+
+      <div class="image-wrapper">
+        <div class="image-label">AFTER</div>
+        <img src="./img/01h-leak2.png" alt="After Biome Blending" class="leak-image">
+      </div>
+
+    </div>
+
+    <a class="discord-btn" href="https://discord.gg/jUuZvfVpAw" target="_blank">
+      <svg class="icon" viewBox="0 0 127.14 96.36" fill="currentColor">
+        <path d="M107.7,8.07A105.15,105.15,0,0,0,77.26,0a77.19,77.19,0,0,0-3.3,6.83A96.67,96.67,0,0,0,53.22,6.83,77.19,77.19,0,0,0,49.88,0,105.15,105.15,0,0,0,19.44,8.07C3.66,31.58-1.86,54.65,1,77.53A105.73,105.73,0,0,0,32,96.36a74.37,74.37,0,0,0,6.71-11,68.6,68.6,0,0,1-10.57-5c.88-.65,1.72-1.33,2.53-2a75.49,75.49,0,0,0,65.78,0c.81.71,1.65,1.39,2.53,2a68.6,68.6,0,0,1-10.57,5,74.37,74.37,0,0,0,6.71,11,105.73,105.73,0,0,0,31-18.83C130.65,49.13,124.71,26.23,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53S36.18,40.36,42.45,40.36,53.87,46,53.87,53,48.72,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.24,60,73.24,53S78.41,40.36,84.69,40.36,96.11,46,96.11,53,91,65.69,84.69,65.69Z"/>
+      </svg>
+      Join the Community Discord
+    </a>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BulletBox - Wiki | Features</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&family=Jersey+10&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #000;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: "Jersey 10", sans-serif;
+      color: #fff;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 800px;
+      padding: 40px 20px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .logo {
+      width: 120px;
+      margin-bottom: 10px;
+      image-rendering: pixelated;
+    }
+
+    .title {
+      color: #FFD400;
+      font-size: 52px;
+      text-decoration: none;
+      letter-spacing: 2px;
+    }
+
+    .subtitle {
+      color: #00d5ff;
+      font-size: 22px;
+      margin-top: 5px;
+      margin-bottom: 25px;
+      text-align: center;
+      opacity: 0.9;
+    }
+
+    .back-btn {
+      align-self: flex-start;
+      color: #00d5ff;
+      font-size: 20px;
+      text-decoration: none;
+      margin-bottom: 20px;
+    }
+
+    .back-btn:hover {
+      text-decoration: underline;
+    }
+
+    .content-box {
+      width: 100%;
+      background: #111;
+      border: 2px solid #222;
+      border-radius: 8px;
+      padding: 22px;
+      margin-bottom: 18px;
+      box-sizing: border-box;
+    }
+
+    .section-title {
+      color: #FFD400;
+      font-size: 30px;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+    }
+
+    .sub-title {
+      color: #00d5ff;
+      font-size: 20px;
+      margin-top: 10px;
+      margin-bottom: 6px;
+    }
+
+    p {
+      font-size: 20px;
+      line-height: 1.4;
+      margin: 0 0 12px 0;
+      color: #ddd;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #ff3b30;
+      color: #fff;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 16px;
+      margin-left: 8px;
+      letter-spacing: 0.5px;
+    }
+
+    code {
+      background: #1b1b1b;
+      padding: 2px 5px;
+      border-radius: 4px;
+      color: #FFD400;
+      font-size: 16px;
+    }
+
+    ul {
+      margin: 8px 0 0 18px;
+      padding: 0;
+    }
+
+    li {
+      font-size: 19px;
+      line-height: 1.4;
+      margin-bottom: 6px;
+      color: #ddd;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <img src="../logo.png" class="logo" alt="BulletBox Logo">
+
+    <a href="index.html" class="title">FEATURES (OUTDATED)</a>
+    <div class="subtitle">Environmental objects, procedural decorations, and interactive combat systems</div>
+
+    <div class="content-box" style="border-color:#ff3b30;">
+      <div class="section-title">EXPERIMENTAL</div>
+      <p>
+        These systems are currently in active development. Spawn rules, balancing, visuals, combat behavior, and interaction systems are subject to change.
+      </p>
+    </div>
+
+    <a href="index.html" class="back-btn">&lt; Back</a>
+
+    <div class="content-box">
+      <div class="section-title">small_tree</div>
+      <p>
+        Basic tree variant used primarily for low-density forest coverage. Serves as the baseline vegetation unit in most biomes.
+      </p>
+    </div>
+
+    <div class="content-box">
+      <div class="section-title">large_tree</div>
+      <p>
+        Expanded tree variant with increased height and footprint. Spawns less frequently and is used to create visual hierarchy in forest regions.
+      </p>
+    </div>
+
+    <div class="content-box">
+      <div class="section-title">meadow_hedge</div>
+      <p>
+        Decorative environmental structure used in meadow biomes. Adds ground-level density and improves biome readability without affecting traversal.
+      </p>
+    </div>
+
+    <div class="content-box">
+      <div class="section-title">meadow_flowers</div>
+      <p>
+        Small decorative flower clusters that spawn throughout meadow biomes. Designed to increase environmental variety and soften biome transitions.
+      </p>
+    </div>
+
+    <div class="content-box">
+      <div class="section-title">stone</div>
+      <p>
+        Generic environmental rock formation used across multiple biome types including forests, stony peaks, and brimstone regions.
+      </p>
+    </div>
+
+    <div class="content-box">
+      <div class="section-title">tumbleweed</div>
+      <p>
+        Lightweight desert vegetation object used to add motion and visual breakup to low-density desert terrain.
+      </p>
+    </div>
+
+    <div class="content-box">
+      <div class="section-title">desert_log</div>
+      <p>
+        Fallen dried log structure found within desert biomes. Used to increase environmental storytelling and terrain variation.
+      </p>
+    </div>
+
+    <div class="content-box">
+      <div class="section-title">palm_tree</div>
+      <p>
+        Tropical tree variant used in beach and desert-adjacent regions. Features a wider canopy and curved trunk profile.
+      </p>
+    </div>
+
+    <div class="content-box">
+      <div class="section-title">beach_umbrella</div>
+      <p>
+        Decorative beach prop used to improve shoreline visual identity and increase environmental diversity in coastal regions.
+      </p>
+    </div>
+
+    <div class="content-box">
+      <div class="section-title">sailboat</div>
+      <p>
+        Rare ocean structure that can generate in open water regions. Primarily intended as a long-range visual landmark.
+      </p>
+    </div>
+
+    <div class="content-box">
+      <div class="section-title">sulfur_spring</div>
+      <p>
+        Volcanic environmental feature found in Brimstone Springs biomes. Emits bright coloration and acts as a biome-identifying landmark.
+      </p>
+    </div>
+
+    <div class="content-box" style="border-color:#00d5ff;">
+      <div class="section-title">Combat Weapon Classes</div>
+
+      <div class="sub-title">Sword <span class="tag">NEW</span></div>
+      <p>
+        Fast melee weapon class featuring wide directional swing arcs and balanced attack reach.
+      </p>
+
+      <div class="sub-title">Kanabo <span class="tag">NEW</span></div>
+      <p>
+        Heavy blunt-force weapon with large swing animations and slower attack pacing.
+      </p>
+
+      <div class="sub-title">Spear <span class="tag">NEW</span></div>
+      <p>
+        Precision thrust weapon using directional stab animations and extended forward range.
+      </p>
+    </div>
+
+    <div class="content-box">
+      <div class="section-title">Feature Generation System</div>
+
+      <p>
+        BulletBox uses deterministic server-authoritative feature generation to ensure all connected players view identical environmental layouts.
+      </p>
+
+      <ul>
+        <li>Coordinate-based spatial hashing</li>
+        <li>Biome-specific feature pools</li>
+        <li>Server-synchronized placement</li>
+        <li>Adaptive feature scaling</li>
+        <li>Chunk-based feature streaming</li>
+      </ul>
+    </div>
+
+    <div class="content-box">
+      <div class="section-title">Planned Expansions</div>
+
+      <ul>
+        <li>Feature interaction systems</li>
+        <li>Tree chopping and destruction</li>
+        <li>Breakable environmental props</li>
+        <li>Additional biome structures</li>
+        <li>Combat status effects</li>
+        <li>Advanced melee chaining systems</li>
+      </ul>
+    </div>
+
+  </div>
+
+</body>
+</html>

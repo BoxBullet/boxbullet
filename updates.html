@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BulletBox - Patch Notes</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&family=Jersey+10&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #000;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: "Jersey 10", sans-serif;
+      font-weight: 400;
+      color: #fff;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      max-width: 700px;
+      padding: 40px 20px;
+      box-sizing: border-box;
+    }
+
+    .logo {
+      width: 140px;
+      margin-bottom: 10px;
+      image-rendering: pixelated;
+    }
+
+    .title {
+      color: #FFD400;
+      font-size: 54px;
+      letter-spacing: 2px;
+      line-height: 1;
+      text-decoration: none;
+    }
+
+    .subtitle {
+      color: #00d5ff;
+      font-size: 22px;
+      margin-top: 5px;
+      margin-bottom: 35px;
+      opacity: 0.9;
+      text-align: center;
+    }
+
+    .back-btn {
+      color: #00d5ff;
+      font-size: 20px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 25px;
+      align-self: flex-start;
+    }
+
+    .back-btn:hover {
+      text-decoration: underline;
+    }
+
+    .log-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      width: 100%;
+      margin-bottom: 30px;
+    }
+
+    .log-item {
+      background: #111;
+      border: 2px solid #222;
+      border-radius: 8px;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-decoration: none;
+      transition: border-color 0.15s ease, transform 0.1s ease;
+    }
+
+    .log-item:hover {
+      border-color: #00d5ff;
+      transform: scale(1.01);
+    }
+
+    .log-info .version {
+      font-size: 26px;
+      color: #FFD400;
+      letter-spacing: 1px;
+    }
+
+    .log-info .tag {
+      font-size: 18px;
+      color: #ff3b30;
+      margin-left: 10px;
+    }
+
+    /* The new eye-catching tag styling */
+    .log-info .new-tag {
+      font-size: 16px;
+      background: #FFD400;
+      color: #000;
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-left: 10px;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+      vertical-align: middle;
+      display: inline-block;
+    }
+
+    .log-info .summary {
+      font-size: 18px;
+      color: #bbb;
+      margin-top: 4px;
+    }
+
+    .arrow {
+      color: #00d5ff;
+      font-size: 28px;
+    }
+
+    .discord-btn {
+      background: #00d5ff;
+      color: #000;
+      padding: 12px 28px;
+      border-radius: 999px;
+      font-size: 20px;
+      text-decoration: none;
+      user-select: none;
+      transition: transform 0.1s ease;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .discord-btn:hover {
+      transform: scale(1.03);
+    }
+
+    .icon {
+      width: 20px;
+      height: 20px;
+    }
+
+    .wiki-btn {
+      margin-bottom: 20px;
+      background: #FFD400;
+      color: #000;
+      padding: 10px 26px;
+      border-radius: 999px;
+      font-size: 20px;
+      text-decoration: none;
+      user-select: none;
+      transition: transform 0.1s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .wiki-btn:hover {
+      transform: scale(1.03);
+    }
+
+    .wiki-btn:active {
+      transform: scale(0.97);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <img src="logo.png" alt="BulletBox Logo" class="logo">
+    <a href="index.html" class="title">BULLETBOX</a>
+    <div class="subtitle">Development Changelogs & Documentation</div>
+
+    <a class="wiki-btn" href="./wiki/index.html">
+      Open Wiki
+    </a>
+
+    <a href="index.html" class="back-btn">&lt; Back to Home</a>
+
+    <div class="log-list">
+
+      <a href="v26.1.1-02c.html" class="log-item">
+        <div class="log-info">
+          <span class="version">26.1.1-02c</span><span class="tag">(Beta Testing!)</span><span class="new-tag">NEW! BETA TESTABLE!</span>
+          <div class="summary">The Singleplayer Update</div>
+        </div>
+        <div class="arrow">&gt;</div>
+      </a>
+
+      <a href="v26.1.1-01j.html" class="log-item">
+        <div class="log-info">
+          <span class="version">26.1.1-01j</span><span class="tag">(Alpha Unreleased)</span>
+          <div class="summary">The Combat, Networking & Social Update</div>
+        </div>
+        <div class="arrow">&gt;</div>
+      </a>
+
+      <a href="v26.1.1-01i.html" class="log-item">
+        <div class="log-info">
+          <span class="version">26.1.1-01i</span><span class="tag">(Alpha Unreleased)</span>
+          <div class="summary">Authoritative World Features</div>
+        </div>
+        <div class="arrow">&gt;</div>
+      </a>
+
+      <a href="v26.1.1-01h.html" class="log-item">
+        <div class="log-info">
+          <span class="version">26.1.1-01h</span><span class="tag">(Alpha Unreleased)</span>
+          <div class="summary">Biome Expansion & Distribution Rework</div>
+        </div>
+        <div class="arrow">&gt;</div>
+      </a>
+
+      <a href="v26.1.1-01g.html" class="log-item">
+        <div class="log-info">
+          <span class="version">26.1.1-01g</span><span class="tag">(Alpha Unreleased)</span>
+          <div class="summary">Launcher & Integration Update</div>
+        </div>
+        <div class="arrow">&gt;</div>
+      </a>
+      
+      <a href="v26.1.1-01f.html" class="log-item">
+        <div class="log-info">
+          <span class="version">26.1.1-01f</span><span class="tag">(Alpha Unreleased)</span>
+          <div class="summary">Biome System Prototype</div>
+        </div>
+        <div class="arrow">&gt;</div>
+      </a>
+
+      <a href="v26.1.1-01e.html" class="log-item">
+        <div class="log-info">
+          <span class="version">26.1.1-01e</span><span class="tag">(Alpha Unreleased)</span>
+          <div class="summary">The Health & Vitality Update</div>
+        </div>
+        <div class="arrow">&gt;</div>
+      </a>
+
+      <a href="v26.1.1-01d.html" class="log-item">
+        <div class="log-info">
+          <span class="version">26.1.1-01d</span><span class="tag">(Alpha Unreleased)</span>
+          <div class="summary">Dynamic Geometry & Camera Stabilization</div>
+        </div>
+        <div class="arrow">&gt;</div>
+      </a>
+
+      <a href="v26.1.1-01c.html" class="log-item">
+        <div class="log-info">
+          <span class="version">26.1.1-01c</span><span class="tag">(Alpha Unreleased)</span>
+          <div class="summary">The Texturing Update Part 1</div>
+        </div>
+        <div class="arrow">&gt;</div>
+      </a>
+
+      <a href="v26.1.1-01b.html" class="log-item">
+        <div class="log-info">
+          <span class="version">26.1.1-01b</span><span class="tag">(Alpha Unreleased)</span>
+          <div class="summary">The Combat & Networking Update</div>
+        </div>
+        <div class="arrow">&gt;</div>
+      </a>
+
+      <a href="v26.1.1-01a.html" class="log-item">
+        <div class="log-info">
+          <span class="version">26.1.1-01a</span><span class="tag">(Alpha Unreleased)</span>
+          <div class="summary">The New Class Architecture</div>
+        </div>
+        <div class="arrow">&gt;</div>
+      </a>
+
+    </div>
+
+    <a class="discord-btn" href="https://discord.gg/jUuZvfVpAw" target="_blank">
+      <svg class="icon" viewBox="0 0 127.14 96.36" fill="currentColor">
+        <path d="M107.7,8.07A105.15,105.15,0,0,0,77.26,0a77.19,77.19,0,0,0-3.3,6.83A96.67,96.67,0,0,0,53.22,6.83,77.19,77.19,0,0,0,49.88,0,105.15,105.15,0,0,0,19.44,8.07C3.66,31.58-1.86,54.65,1,77.53A105.73,105.73,0,0,0,32,96.36a74.37,74.37,0,0,0,6.71-11,68.6,68.6,0,0,1-10.57-5c.88-.65,1.72-1.33,2.53-2a75.49,75.49,0,0,0,65.78,0c.81.71,1.65,1.39,2.53,2a68.6,68.6,0,0,1-10.57,5,74.37,74.37,0,0,0,6.71,11,105.73,105.73,0,0,0,31-18.83C130.65,49.13,124.71,26.23,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53S36.18,40.36,42.45,40.36,53.87,46,53.87,53,48.72,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.24,60,73.24,53S78.41,40.36,84.69,40.36,96.11,46,96.11,53,91,65.69,84.69,65.69Z"/>
+      </svg>
+      Join the Community Discord
+    </a>
+  </div>
+
+</body>
+</html>

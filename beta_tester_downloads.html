@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BulletBox - Beta Testers</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&family=Jersey+10&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #000;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: "Jersey 10", sans-serif;
+      color: #fff;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 700px;
+      padding: 30px 20px;
+      box-sizing: border-box;
+      text-align: center;
+    }
+
+    .logo {
+      width: 170px;
+      margin-bottom: 10px;
+      image-rendering: pixelated;
+    }
+
+    .title {
+      color: #FFD400;
+      font-size: 64px;
+      letter-spacing: 2px;
+      line-height: 1;
+    }
+
+    .subtitle {
+      color: #00d5ff;
+      font-size: 24px;
+      margin-top: 8px;
+      margin-bottom: 35px;
+      opacity: 0.9;
+    }
+
+    .box {
+      background: #111;
+      border: 2px solid #222;
+      border-radius: 10px;
+      padding: 30px;
+    }
+
+    .section-title {
+      color: #FFD400;
+      font-size: 34px;
+      margin-bottom: 12px;
+      letter-spacing: 1px;
+    }
+
+    p {
+      font-size: 22px;
+      line-height: 1.4;
+      opacity: 0.95;
+      margin-bottom: 22px;
+    }
+
+    input {
+      width: 100%;
+      max-width: 420px;
+      background: #000;
+      border: 2px solid #333;
+      border-radius: 8px;
+      color: #fff;
+      font-family: "Jersey 10", sans-serif;
+      font-size: 28px;
+      padding: 14px 18px;
+      outline: none;
+      box-sizing: border-box;
+      text-align: center;
+      letter-spacing: 2px;
+    }
+
+    input:focus {
+      border-color: #00d5ff;
+    }
+
+    .button {
+      margin-top: 20px;
+      background: #00d5ff;
+      color: #000;
+      border: none;
+      padding: 14px 32px;
+      border-radius: 999px;
+      font-size: 24px;
+      font-family: "Jersey 10", sans-serif;
+      cursor: pointer;
+      transition: transform 0.1s ease;
+    }
+
+    .button:hover {
+      transform: scale(1.03);
+    }
+
+    .button:active {
+      transform: scale(0.97);
+    }
+
+    .error {
+      color: #ff4d4d;
+      font-size: 22px;
+      margin-top: 18px;
+      display: none;
+    }
+
+    .downloads {
+      display: none;
+      flex-direction: column;
+      gap: 18px;
+      margin-top: 25px;
+    }
+
+    .download-btn {
+      background: #1b1b1b;
+      border: 2px solid #333;
+      color: #fff;
+      text-decoration: none;
+      padding: 18px 24px;
+      border-radius: 10px;
+      font-size: 28px;
+      transition: all 0.12s ease;
+      display: block;
+    }
+
+    .download-btn:hover {
+      border-color: #00d5ff;
+      transform: scale(1.02);
+    }
+
+    .download-label {
+      display: block;
+      color: #00d5ff;
+      font-size: 20px;
+      margin-top: 4px;
+      opacity: 0.9;
+    }
+
+    .success-text {
+      color: #00ff88;
+      font-size: 24px;
+      margin-top: 10px;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <img src="logo.png" alt="BulletBox Logo" class="logo">
+
+    <div class="title">BULLETBOX</div>
+    <div class="subtitle">Private Beta Tester Access</div>
+
+    <div class="box">
+
+      <div id="login-section">
+        <div class="section-title">ENTER DOWNLOAD ID</div>
+
+        <p>
+          This page is restricted to approved beta testers.
+        </p>
+
+        <input
+          type="text"
+          id="downloadId"
+          placeholder="ENTER ID"
+          autocomplete="off"
+          spellcheck="false"
+        >
+
+        <br>
+
+        <button class="button" onclick="checkCode()">
+          Access Downloads
+        </button>
+
+        <div class="error" id="errorText">
+          Invalid download ID.
+        </div>
+      </div>
+
+      <div class="downloads" id="downloadsSection">
+
+        <div class="section-title">DOWNLOAD BUILDS</div>
+
+        <div class="success-text">
+          Access Granted
+        </div>
+
+        <iframe frameborder="0" src="https://itch.io/embed/4607219?border_width=5&amp;bg_color=000000&amp;fg_color=ffffff&amp;link_color=5b61fa&amp;border_color=2de6ff" width="560" height="175"><a href="https://leonardodecapitan.itch.io/bulletbox">BulletBox by LeonardoDeCapitan</a></iframe>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script>
+    const validCodes = [
+      "a5e2o8e",
+      "y3n0w5h",
+      "s8n2d9b",
+      "l9s1a7v"
+    ];
+
+    function checkCode() {
+      const input = document
+        .getElementById("downloadId")
+        .value
+        .trim()
+        .toLowerCase();
+
+      const loginSection = document.getElementById("login-section");
+      const downloadsSection = document.getElementById("downloadsSection");
+      const errorText = document.getElementById("errorText");
+
+      if (validCodes.includes(input)) {
+        loginSection.classList.add("hidden");
+        downloadsSection.style.display = "flex";
+      } else {
+        errorText.style.display = "block";
+      }
+    }
+
+    document
+      .getElementById("downloadId")
+      .addEventListener("keydown", function(e) {
+        if (e.key === "Enter") {
+          checkCode();
+        }
+      });
+  </script>
+
+</body>
+</html>

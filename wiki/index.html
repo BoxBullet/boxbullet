@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BulletBox - Wiki</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&family=Jersey+10&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #000;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: "Jersey 10", sans-serif;
+      font-weight: 400;
+      color: #fff;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      max-width: 700px;
+      padding: 40px 20px;
+      box-sizing: border-box;
+    }
+
+    .logo {
+      width: 140px;
+      margin-bottom: 10px;
+      image-rendering: pixelated;
+    }
+
+    .title {
+      color: #FFD400;
+      font-size: 54px;
+      letter-spacing: 2px;
+      line-height: 1;
+      text-decoration: none;
+    }
+
+    .subtitle {
+      color: #00d5ff;
+      font-size: 22px;
+      margin-top: 5px;
+      margin-bottom: 35px;
+      opacity: 0.9;
+      text-align: center;
+    }
+
+    .back-btn {
+      color: #00d5ff;
+      font-size: 20px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 25px;
+      align-self: flex-start;
+    }
+
+    .back-btn:hover {
+      text-decoration: underline;
+    }
+
+    .log-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      width: 100%;
+      margin-bottom: 30px;
+    }
+
+    .log-item {
+      background: #111;
+      border: 2px solid #222;
+      border-radius: 8px;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-decoration: none;
+      transition: border-color 0.15s ease, transform 0.1s ease;
+    }
+
+    .log-item:hover {
+      border-color: #00d5ff;
+      transform: scale(1.01);
+    }
+
+    .log-info .version {
+      font-size: 28px;
+      color: #FFD400;
+      letter-spacing: 1px;
+    }
+
+    .log-info .summary {
+      font-size: 18px;
+      color: #bbb;
+      margin-top: 4px;
+    }
+
+    .arrow {
+      color: #00d5ff;
+      font-size: 28px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <img src="../logo.png" alt="BulletBox Logo" class="logo">
+
+    <a href="../index.html" class="title">BULLETBOX</a>
+    <div class="subtitle">Wiki / Game Documentation</div>
+
+    <a href="../index.html" class="back-btn">&lt; Back to Home</a>
+
+    <div class="log-list">
+
+      <a href="biomes.html" class="log-item">
+        <div class="log-info">
+          <span class="version">Biomes (OUTDATED)</span>
+          <div class="summary">World regions, climate rules, and generation behavior</div>
+        </div>
+        <div class="arrow">&gt;</div>
+      </a>
+
+      <a href="features.html" class="log-item">
+        <div class="log-info">
+          <span class="version">Features (OUTDATED)</span>
+          <div class="summary">Trees, objects, and environmental decorations</div>
+        </div>
+        <div class="arrow">&gt;</div>
+      </a>
+
+    </div>
+
+  </div>
+
+</body>
+</html>

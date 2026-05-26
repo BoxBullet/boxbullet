@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BulletBox - Info</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&family=Jersey+10&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #000;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: "Jersey 10", sans-serif;
+      font-weight: 400;
+      color: #fff;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 650px;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .logo {
+      width: 180px;
+      margin-bottom: 10px;
+      image-rendering: pixelated;
+    }
+
+    .title {
+      color: #FFD400;
+      font-size: 64px;
+      letter-spacing: 2px;
+      line-height: 1;
+    }
+
+    .subtitle {
+      color: #00d5ff;
+      font-size: 24px;
+      margin-top: 5px;
+      margin-bottom: 30px;
+      opacity: 0.9;
+    }
+
+    .content-box {
+      background: #111;
+      border: 2px solid #222;
+      border-radius: 8px;
+      padding: 25px;
+      margin-bottom: 25px;
+      text-align: left;
+    }
+
+    .section-title {
+      color: #FFD400;
+      font-size: 28px;
+      margin-top: 0;
+      margin-bottom: 12px;
+      letter-spacing: 1px;
+    }
+
+    p {
+      font-size: 20px;
+      line-height: 1.4;
+      margin: 0 0 16px 0;
+      opacity: 0.95;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    .release-badge {
+      display: inline-block;
+      background: #ff3b30;
+      color: #fff;
+      padding: 6px 16px;
+      font-size: 22px;
+      border-radius: 4px;
+      margin-top: 5px;
+      letter-spacing: 1px;
+    }
+
+    .button {
+      margin-top: 10px;
+      background: #00d5ff;
+      color: #000;
+      padding: 14px 32px;
+      border-radius: 999px;
+      font-size: 22px;
+      text-decoration: none;
+      user-select: none;
+      transition: transform 0.1s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .button:hover {
+      transform: scale(1.03);
+    }
+
+    .button:active {
+      transform: scale(0.97);
+    }
+    
+    .icon {
+      width: 22px;
+      height: 22px;
+    }
+
+    .btn-group {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      width: 100%;
+      align-items: center;
+      margin-top: 10px;
+    }
+
+    /* A sleek white/neutral variant for the patch notes secondary link */
+    .button.secondary {
+      background: #ffffff;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <img src="logo.png" alt="BulletBox Logo" class="logo">
+
+    <div class="title">BULLETBOX</div>
+    <div class="subtitle">The ultimate 2D PvP experience.</div>
+
+    <div class="content-box">
+      <div class="section-title">WHAT IS BULLETBOX?</div>
+      <p>
+        BulletBox is a fast-paced, high-intensity 2D PvP game built for raw mechanical skill and tactical positioning. Take control, outmaneuver your opponents in tight arena layouts, and dominate the battlefield. Featuring precise collision physics, zero fluff, and pure competitive action.
+      </p>
+    </div>
+
+    <div class="content-box" style="width: 100%; box-sizing: border-box; text-align: center;">
+      <div class="section-title">RELEASE DATE</div>
+      <p>The arena opens soon. Get ready for launch.</p>
+      <div class="release-badge">COMING IN JUNE 2026</div>
+    </div>
+
+    <a class="button secondary" href="updates.html">
+      See The Patch Notes!
+    </a>
+
+    <a class="button" href="https://discord.gg/jUuZvfVpAw" target="_blank">
+      <svg class="icon" viewBox="0 0 127.14 96.36" fill="currentColor">
+        <path d="M107.7,8.07A105.15,105.15,0,0,0,77.26,0a77.19,77.19,0,0,0-3.3,6.83A96.67,96.67,0,0,0,53.22,6.83,77.19,77.19,0,0,0,49.88,0,105.15,105.15,0,0,0,19.44,8.07C3.66,31.58-1.86,54.65,1,77.53A105.73,105.73,0,0,0,32,96.36a74.37,74.37,0,0,0,6.71-11,68.6,68.6,0,0,1-10.57-5c.88-.65,1.72-1.33,2.53-2a75.49,75.49,0,0,0,65.78,0c.81.71,1.65,1.39,2.53,2a68.6,68.6,0,0,1-10.57,5,74.37,74.37,0,0,0,6.71,11,105.73,105.73,0,0,0,31-18.83C130.65,49.13,124.71,26.23,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53S36.18,40.36,42.45,40.36,53.87,46,53.87,53,48.72,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.24,60,73.24,53S78.41,40.36,84.69,40.36,96.11,46,96.11,53,91,65.69,84.69,65.69Z"/>
+      </svg>
+      Join the Community Discord
+    </a>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BulletBox - Wiki | Biomes</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&family=Jersey+10&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #000;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: "Jersey 10", sans-serif;
+      color: #fff;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 800px;
+      padding: 40px 20px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .logo {
+      width: 120px;
+      margin-bottom: 10px;
+      image-rendering: pixelated;
+    }
+
+    .title {
+      color: #FFD400;
+      font-size: 52px;
+      text-decoration: none;
+      letter-spacing: 2px;
+    }
+
+    .subtitle {
+      color: #00d5ff;
+      font-size: 22px;
+      margin-top: 5px;
+      margin-bottom: 25px;
+      text-align: center;
+      opacity: 0.9;
+    }
+
+    .back-btn {
+      align-self: flex-start;
+      color: #00d5ff;
+      font-size: 20px;
+      text-decoration: none;
+      margin-bottom: 20px;
+    }
+
+    .back-btn:hover {
+      text-decoration: underline;
+    }
+
+    .content-box {
+      width: 100%;
+      background: #111;
+      border: 2px solid #222;
+      border-radius: 8px;
+      padding: 22px;
+      margin-bottom: 18px;
+      box-sizing: border-box;
+    }
+
+    .section-title {
+      color: #FFD400;
+      font-size: 30px;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+    }
+
+    .sub-title {
+      color: #00d5ff;
+      font-size: 20px;
+      margin-top: 10px;
+      margin-bottom: 6px;
+    }
+
+    p {
+      font-size: 20px;
+      line-height: 1.4;
+      margin: 0 0 12px 0;
+      color: #ddd;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 20px;
+      color: #ddd;
+      font-size: 20px;
+      line-height: 1.4;
+    }
+
+    li {
+      margin-bottom: 6px;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #00d5ff;
+      color: #000;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 16px;
+      margin-left: 8px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <img src="../logo.png" class="logo" alt="BulletBox Logo">
+
+    <a href="index.html" class="title">BIOMES (OUTDATED)</a>
+    <div class="subtitle">World generation, climate rules, and biome behavior</div>
+
+    <a href="index.html" class="back-btn">&lt; Back</a>
+
+    <div class="content-box">
+      <div class="section-title">OVERVIEW</div>
+      <p>
+        Biomes define world regions using Perlin-based noise generation with weighted thresholds, producing large-scale terrain diversity and rare extreme environments.
+      </p>
+    </div>
+
+    <div class="content-box">
+      <div class="section-title">PRIMARY BIOME TYPES</div>
+
+      <div class="sub-title">Forest</div>
+      <p>Baseline land biome. Reduced dominance in recent updates to allow more biome diversity.</p>
+
+      <div class="sub-title">Meadow</div>
+      <p>Open grassland biome with lighter vegetation density and hedge generation support.</p>
+
+      <div class="sub-title">Desert</div>
+      <p>Rebalanced to match forest and meadow generation priority.</p>
+
+      <div class="sub-title">Ocean</div>
+      <p>Ultra low-frequency generation producing large contiguous water regions.</p>
+
+      <div class="sub-title">Beach</div>
+      <p>Transition biome generated along ocean borders for smooth coastline blending.</p>
+    </div>
+
+    <div class="content-box">
+      <div class="section-title">RARE & EXTREME BIOMES</div>
+
+      <div class="sub-title">Stony Peaks <span class="tag">Rare</span></div>
+      <p>High-elevation extreme terrain generated from noise threshold extremes.</p>
+
+      <div class="sub-title">Brimstone Springs <span class="tag">Rare</span></div>
+      <p>Volatile biome with orange-tinted overlay and high-contrast terrain visuals.</p>
+    </div>
+
+    <div class="content-box">
+      <div class="section-title">GENERATION RULES</div>
+
+      <ul>
+        <li>Perlin noise drives biome distribution with adjusted Gaussian weighting.</li>
+        <li>Extreme noise values produce rare biome types more frequently.</li>
+        <li>Ocean generation uses ultra-low frequency noise (0.003f).</li>
+        <li>Beach biomes act as mandatory transition zones between land and ocean.</li>
+        <li>Rivers override standard land biomes during generation.</li>
+        <li>Oceans and beaches override river placement where conflicts occur.</li>
+      </ul>
+    </div>
+
+    <div class="content-box">
+      <div class="section-title">BLENDING SYSTEM</div>
+
+      <ul>
+        <li>Chunks blend biome colors using weighted neighbor sampling.</li>
+        <li>Radius 1 neighbors contribute strongest influence (0.85 weight).</li>
+        <li>Radius 2 and 3 neighbors provide diminishing smoothing effects.</li>
+        <li>Rivers are excluded from blending to preserve sharp water paths.</li>
+        <li>Brimstone biome applies an overlay tint above base terrain colors.</li>
+      </ul>
+    </div>
+
+    <div class="content-box">
+      <div class="section-title">TECHNICAL NOTES</div>
+
+      <ul>
+        <li>Chunk blending is amortized across frames using a processing queue.</li>
+        <li>Maximum of 500 blend operations per frame for performance stability.</li>
+        <li>Visible-only chunks are processed via frustum culling.</li>
+        <li>Heartbeat system refreshes stale or desynced biome data every 5 seconds.</li>
+      </ul>
+    </div>
+
+  </div>
+
+</body>
+</html>
