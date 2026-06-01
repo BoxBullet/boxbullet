@@ -1,0 +1,327 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BulletBox Patch Notes - 26.1.1-02d</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&family=Jersey+10&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #000;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: "Jersey 10", sans-serif;
+      font-weight: 400;
+      color: #fff;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      max-width: 700px;
+      padding: 40px 20px;
+      box-sizing: border-box;
+    }
+
+    .logo {
+      width: 140px;
+      margin-bottom: 10px;
+      image-rendering: pixelated;
+    }
+
+    .title {
+      color: #FFD400;
+      font-size: 54px;
+      letter-spacing: 2px;
+      line-height: 1;
+      text-decoration: none;
+    }
+
+    .subtitle {
+      color: #00d5ff;
+      font-size: 22px;
+      margin-top: 5px;
+      margin-bottom: 35px;
+      opacity: 0.9;
+      text-align: center;
+    }
+
+    .back-btn {
+      color: #00d5ff;
+      font-size: 20px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 20px;
+      align-self: flex-start;
+    }
+
+    .back-btn:hover {
+      text-decoration: underline;
+    }
+
+    .content-box {
+      background: #111;
+      border: 2px solid #222;
+      border-radius: 8px;
+      padding: 25px;
+      margin-bottom: 20px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .patch-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      border-bottom: 2px solid #222;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
+
+    .patch-title {
+      font-size: 32px;
+      color: #FFD400;
+      letter-spacing: 1px;
+    }
+
+    .patch-status {
+      font-size: 20px;
+      color: #ff3b30;
+    }
+
+    .section-title {
+      color: #00d5ff;
+      font-size: 24px;
+      margin-top: 20px;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .section-title:first-of-type {
+      margin-top: 0;
+    }
+
+    ul {
+      margin: 0 0 20px 0;
+      padding-left: 20px;
+    }
+
+    li {
+      font-size: 19px;
+      line-height: 1.4;
+      margin-bottom: 8px;
+      color: #eee;
+    }
+
+    li strong {
+      color: #fff;
+    }
+
+    .discord-btn {
+      background: #00d5ff;
+      color: #000;
+      padding: 12px 28px;
+      border-radius: 999px;
+      font-size: 20px;
+      text-decoration: none;
+      user-select: none;
+      transition: transform 0.1s ease;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .discord-btn:hover {
+      transform: scale(1.03);
+    }
+
+    .download-btn {
+        background: #FFD400;
+        color: #000;
+        padding: 12px 28px;
+        border-radius: 999px;
+        font-size: 20px;
+        text-decoration: none;
+        user-select: none;
+        transition: transform 0.1s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 18px;
+        }
+
+        .download-btn:hover {
+        transform: scale(1.03);
+        }
+
+    .icon {
+      width: 20px;
+      height: 20px;
+    }
+
+    code {
+      background: #1b1b1b;
+      padding: 2px 5px;
+      border-radius: 4px;
+      color: #FFD400;
+      font-size: 16px;
+    }
+
+    .image-wrapper {
+      position: relative;
+      margin-top: 15px;
+      margin-bottom: 25px;
+    }
+
+    .image-label {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: rgba(0,0,0,0.75);
+      border: 2px solid #FFD400;
+      color: #FFD400;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 24px;
+      letter-spacing: 1px;
+      z-index: 2;
+    }
+
+    .leak-image {
+      width: 100%;
+      max-width: 100%;
+      border: 2px solid #222;
+      border-radius: 6px;
+      image-rendering: pixelated;
+      display: block;
+      margin-bottom: 18px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <img src="logo.png" alt="BulletBox Logo" class="logo">
+
+    <a href="index.html" class="title">BULLETBOX</a>
+    <div class="subtitle">The Ambience & Adversaries Update</div>
+
+    <a href="updates.html" class="back-btn">&lt; Back to Patch Notes</a>
+
+    <div class="content-box">
+
+      <div class="patch-header">
+        <div class="patch-title">Bulletbox 26.1.1-02d</div>
+        <div class="patch-status">In Beta Testing!</div>
+      </div>
+
+      <div class="section-title">New Sounds</div>
+
+      <ul>
+        <li>
+          Added shield block and sword swing sounds. (26.1.1-02d.1/1)
+        </li>
+        <li>
+          Added a sound for the raid countdown. (26.1.1-02d.1/2)
+        </li>
+        <li>
+          Added a sound for an entity dying, the player killing an entity, and the player dying. (26.1.1-02d.1/3)
+        </li>
+        <li>
+          Added footstep sounds for all 8 biomes. (26.1.1-02d.1/4)
+        </li>
+      </ul>
+
+      <div class="section-title">Raiders</div>
+
+      <ul>
+        <li>
+          The default raider is now called a "Raidshroomer" to allow other types of raiders in the future. (26.1.1-02d.2/1)
+        </li>
+        <li>
+          Raidshroomers now have their own texture for: idle, angry, and afraid. (26.1.1-02d.2/2)
+        </li>
+        <li>
+          Raidshroomers can now only reach 80% of the player's base reach (26.1.1-02d.2/3)
+        </li>
+        <li>
+          Raidshroomers now only spawn with swords. (26.1.1-02d.2/4)
+        </li>
+        <li>
+          Raidshroomers now give the player a Raidshroom upon death. (26.1.1-02d.2/5)
+        </li>
+      </ul>
+
+      <div class="section-title">Features Generation</div>
+
+      <ul>
+        <li>
+          All features are now forced to generate at least 3 chunks away from each other. (26.1.1-02d.3/1)
+        </li>
+        <li>
+          All features' generation chances have been doubled to keep areas dense as before. (26.1.1-02d.3/2)
+        </li>
+        <li>
+          Features now render top-to-bottom instead of randomly. (26.1.1-02d.3/3)
+        </li>
+      </ul>
+
+      <div class="section-title">Rivers</div>
+
+      <ul>
+        <li>
+          Rivers now have a range for the color of each chunk to be slightly different. (26.1.1-02d.4/3)
+        </li>
+        <li>
+          River colors reroll every 0.8 - 1.2 seconds. (26.1.1-02d.4/4)
+        </li>
+      </ul>
+
+      <div class="section-title">Technical Changes</div>
+
+      <ul>
+        <li>
+          Added a new AddItem function. (26.1.1-02d.5/1)
+        </li>
+        <li>
+          Added a new ItemStack dictionary for item names. (26.1.1-02d.5/2)
+        </li>
+        <li>
+          Non-weapon items don't have their textures rotated anymore. (26.1.1-02d.5/3)
+        </li>
+        <li>
+          A new Bulletbox Studios splash screen shows whenever textures are loaded and on game start. (26.1.1-02d.5/4)
+        </li>
+        <li>
+          Added a two new textures in <code>resources/textures/item/raidshroom.png</code> and <code>resources/textures/ui/other/bbstudios.png</code>. (26.1.1-02d.5/5)
+        </li>
+      </ul>
+
+      <a class="download-btn" href="https://leonardodecapitan.itch.io/bulletbox" target="_blank">Download for BETA TESTING</a>
+
+    </div>
+
+    <a class="discord-btn" href="https://discord.gg/jUuZvfVpAw" target="_blank">
+      <svg class="icon" viewBox="0 0 127.14 96.36" fill="currentColor">
+        <path d="M107.7,8.07A105.15,105.15,0,0,0,77.26,0a77.19,77.19,0,0,0-3.3,6.83A96.67,96.67,0,0,0,53.22,6.83,77.19,77.19,0,0,0,49.88,0,105.15,105.15,0,0,0,19.44,8.07C3.66,31.58-1.86,54.65,1,77.53A105.73,105.73,0,0,0,32,96.36a74.37,74.37,0,0,0,6.71-11,68.6,68.6,0,0,1-10.57-5c.88-.65,1.72-1.33,2.53-2a75.49,75.49,0,0,0,65.78,0c.81.71,1.65,1.39,2.53,2a68.6,68.6,0,0,1-10.57,5,74.37,74.37,0,0,0,6.71,11,105.73,105.73,0,0,0,31-18.83C130.65,49.13,124.71,26.23,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53S36.18,40.36,42.45,40.36,53.87,46,53.87,53,48.72,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.24,60,73.24,53S78.41,40.36,84.69,40.36,96.11,46,96.11,53,91,65.69,84.69,65.69Z"/>
+      </svg>
+      Join the Community Discord
+    </a>
+
+  </div>
+
+</body>
+</html>
