@@ -1,0 +1,606 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BulletBox Patch Notes - 26.1 Pre-Release 1</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&family=Jersey+10&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #000;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: "Jersey 10", sans-serif;
+      font-weight: 400;
+      color: #fff;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      max-width: 700px;
+      padding: 40px 20px;
+      box-sizing: border-box;
+    }
+
+    .logo {
+      width: 140px;
+      margin-bottom: 10px;
+      image-rendering: pixelated;
+    }
+
+    .title {
+      color: #FFD400;
+      font-size: 54px;
+      letter-spacing: 2px;
+      line-height: 1;
+      text-decoration: none;
+    }
+
+    .subtitle {
+      color: #00d5ff;
+      font-size: 22px;
+      margin-top: 5px;
+      margin-bottom: 35px;
+      opacity: 0.9;
+      text-align: center;
+    }
+
+    .back-btn {
+      color: #00d5ff;
+      font-size: 20px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 20px;
+      align-self: flex-start;
+    }
+
+    .back-btn:hover {
+      text-decoration: underline;
+    }
+
+    .content-box {
+      background: #111;
+      border: 2px solid #222;
+      border-radius: 8px;
+      padding: 25px;
+      margin-bottom: 20px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .patch-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      border-bottom: 2px solid #222;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
+
+    .patch-title {
+      font-size: 32px;
+      color: #FFD400;
+      letter-spacing: 1px;
+    }
+
+    .patch-status {
+      font-size: 20px;
+      color: #ff9500;
+    }
+
+    .section-title {
+      color: #00d5ff;
+      font-size: 24px;
+      margin-top: 20px;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    ul {
+      margin: 0 0 20px 0;
+      padding-left: 20px;
+    }
+
+    li {
+      font-size: 19px;
+      line-height: 1.4;
+      margin-bottom: 8px;
+      color: #eee;
+    }
+
+    .discord-btn {
+      background: #00d5ff;
+      color: #000;
+      padding: 12px 28px;
+      border-radius: 999px;
+      font-size: 20px;
+      text-decoration: none;
+      user-select: none;
+      transition: transform 0.1s ease;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .discord-btn:hover {
+      transform: scale(1.03);
+    }
+
+    .download-btn {
+      background: #FFD400;
+      color: #000;
+      padding: 12px 28px;
+      border-radius: 999px;
+      font-size: 20px;
+      text-decoration: none;
+      user-select: none;
+      transition: transform 0.1s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 18px;
+    }
+
+    .download-btn:hover {
+      transform: scale(1.03);
+    }
+
+    .icon {
+      width: 20px;
+      height: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <img src="logo.png" alt="BulletBox Logo" class="logo">
+
+    <a href="index.html" class="title">BULLETBOX</a>
+    <div class="subtitle">Patch Notes</div>
+
+    <a href="updates.html" class="back-btn">&lt; Back to Patch Notes</a>
+
+    <div class="content-box">
+
+      <div class="patch-header">
+        <div class="patch-title">Bulletbox 26.1 Pre-Release 1</div>
+        <div class="patch-status">Pre-Release</div>
+      </div>
+
+      <ul>
+        <li><b>This is the first pre-release for Bulletbox 26.1. Expect mainly small additions and bug fixes from now on. Props to @Winter for the soundtracks! They will be credited accordingly in the next pre-release in-game.</b></li>
+        <li><b>If your operating system isn't listed under the downloads page, or it doesn't work, please reach out to me!</b></li>
+        <li><b>Note: We will be opening a speedrun site where you can submit runs later, along with some built-in add-ons for speedrunners and other small things our community may enjoy.</b></li>
+      </ul>
+
+      <div class="section-title">WEAPONS</div>
+      <ul>
+        <li><b>All weapons have been reworked and tiered:</b></li>
+        <li><b>Wooden Sword</b>
+          <ul>
+            <li>Texture Key: <code style="color: #FFD400;">wooden_sword</code></li>
+            <li>Cooldown: 400 ms</li>
+            <li>Damage: 4</li>
+            <li>Range: 230</li>
+            <li>Knockback: 20</li>
+          </ul>
+        </li>
+        <li><b>Wooden Axe</b>
+          <ul>
+            <li>Texture Key: <code style="color: #FFD400;">wooden_axe</code></li>
+            <li>Cooldown: 950 ms</li>
+            <li>Damage: 9</li>
+            <li>Range: 320</li>
+            <li>Knockback: 45</li>
+          </ul>
+        </li>
+        <li><b>Wooden Scythe</b>
+          <ul>
+            <li>Texture Key: <code style="color: #FFD400;">wooden_scythe</code></li>
+            <li>Cooldown: 650 ms</li>
+            <li>Damage: 5</li>
+            <li>Range: 260</li>
+            <li>Knockback: -1</li>
+          </ul>
+        </li>
+        <li><b>Wooden Spear</b>
+          <ul>
+            <li>Texture Key: <code style="color: #FFD400;">wooden_spear</code></li>
+            <li>Cooldown: 550 ms</li>
+            <li>Damage: 3</li>
+            <li>Range: 550</li>
+            <li>Knockback: 5</li>
+          </ul>
+        </li>
+        <li><b>Wooden Club</b>
+          <ul>
+            <li>Texture Key: <code style="color: #FFD400;">wooden_kanabo</code></li>
+            <li>Cooldown: 1200 ms</li>
+            <li>Damage: 12</li>
+            <li>Range: 290</li>
+            <li>Knockback: 50</li>
+          </ul>
+        </li>
+        <li><b>Stone Tier</b></li>
+        <li><b>Stone Sword</b>
+          <ul>
+            <li>Texture Key: <code style="color: #FFD400;">stone_sword</code></li>
+            <li>Cooldown: 450 ms</li>
+            <li>Damage: 7</li>
+            <li>Range: 240</li>
+            <li>Knockback: 22</li>
+          </ul>
+        </li>
+        <li><b>Stone Axe</b>
+          <ul>
+            <li>Texture Key: <code style="color: #FFD400;">stone_axe</code></li>
+            <li>Cooldown: 920 ms</li>
+            <li>Damage: 15</li>
+            <li>Range: 330</li>
+            <li>Knockback: 50</li>
+          </ul>
+        </li>
+        <li><b>Stone Scythe</b>
+          <ul>
+            <li>Texture Key: <code style="color: #FFD400;">stone_scythe</code></li>
+            <li>Cooldown: 640 ms</li>
+            <li>Damage: 10</li>
+            <li>Range: 270</li>
+            <li>Knockback: -5</li>
+          </ul>
+        </li>
+        <li><b>Stone Spear</b>
+          <ul>
+            <li>Texture Key: <code style="color: #FFD400;">stone_spear</code></li>
+            <li>Cooldown: 580 ms</li>
+            <li>Damage: 6</li>
+            <li>Range: 580</li>
+            <li>Knockback: 8</li>
+          </ul>
+        </li>
+        <li><b>Stone Kanabo</b>
+          <ul>
+            <li>Texture Key: <code style="color: #FFD400;">stone_kanabo</code></li>
+            <li>Cooldown: 1150 ms</li>
+            <li>Damage: 22</li>
+            <li>Range: 300</li>
+            <li>Knockback: 55</li>
+          </ul>
+        </li>
+        <li><b>Copper Tier</b></li>
+        <li><b>Copper Sword</b>
+          <ul>
+            <li>Texture Key: <code style="color: #FFD400;">copper_sword</code></li>
+            <li>Cooldown: 410 ms</li>
+            <li>Damage: 9</li>
+            <li>Range: 250</li>
+            <li>Knockback: 24</li>
+          </ul>
+        </li>
+        <li><b>Copper Axe</b>
+          <ul>
+            <li>Texture Key: <code style="color: #FFD400;">copper_axe</code></li>
+            <li>Cooldown: 880 ms</li>
+            <li>Damage: 19</li>
+            <li>Range: 340</li>
+            <li>Knockback: 52</li>
+          </ul>
+        </li>
+        <li><b>Copper Scythe</b>
+          <ul>
+            <li>Texture Key: <code style="color: #FFD400;">copper_scythe</code></li>
+            <li>Cooldown: 600 ms</li>
+            <li>Damage: 12</li>
+            <li>Range: 280</li>
+            <li>Knockback: -10</li>
+          </ul>
+        </li>
+        <li><b>Copper Spear</b>
+          <ul>
+            <li>Texture Key: <code style="color: #FFD400;">copper_spear</code></li>
+            <li>Cooldown: 560 ms</li>
+            <li>Damage: 7</li>
+            <li>Range: 590</li>
+            <li>Knockback: 9</li>
+          </ul>
+        </li>
+        <li><b>Copper Kanabo</b>
+          <ul>
+            <li>Texture Key: <code style="color: #FFD400;">copper_kanabo</code></li>
+            <li>Cooldown: 1100 ms</li>
+            <li>Damage: 28</li>
+            <li>Range: 305</li>
+            <li>Knockback: 58</li>
+          </ul>
+        </li>
+        <li><b>Iron Tier</b></li>
+        <li><b>Iron Sword</b>
+          <ul>
+            <li>Texture Key: <code style="color: #FFD400;">iron_sword</code></li>
+            <li>Cooldown: 425 ms</li>
+            <li>Damage: 10</li>
+            <li>Range: 250</li>
+            <li>Knockback: 25</li>
+          </ul>
+        </li>
+        <li><b>Iron Axe</b>
+          <ul>
+            <li>Texture Key: <code style="color: #FFD400;">iron_axe</code></li>
+            <li>Cooldown: 900 ms</li>
+            <li>Damage: 22</li>
+            <li>Range: 345</li>
+            <li>Knockback: 55</li>
+          </ul>
+        </li>
+        <li><b>Iron Scythe</b>
+          <ul>
+            <li>Texture Key: <code style="color: #FFD400;">iron_scythe</code></li>
+            <li>Cooldown: 625 ms</li>
+            <li>Damage: 14</li>
+            <li>Range: 280</li>
+            <li>Knockback: -10</li>
+          </ul>
+        </li>
+        <li><b>Iron Spear</b>
+          <ul>
+            <li>Texture Key: <code style="color: #FFD400;">iron_spear</code></li>
+            <li>Cooldown: 575 ms</li>
+            <li>Damage: 8</li>
+            <li>Range: 600</li>
+            <li>Knockback: 10</li>
+          </ul>
+        </li>
+        <li><b>Iron Kanabo</b>
+          <ul>
+            <li>Texture Key: <code style="color: #FFD400;">iron_kanabo</code></li>
+            <li>Cooldown: 1115 ms</li>
+            <li>Damage: 32</li>
+            <li>Range: 305</li>
+            <li>Knockback: 60</li>
+          </ul>
+        </li>
+        <li><b>Diamond Tier</b></li>
+        <li><b>Diamond Sword</b>
+          <ul>
+            <li>Texture Key: <code style="color: #FFD400;">diamond_sword</code></li>
+            <li>Cooldown: 400 ms</li>
+            <li>Damage: 15</li>
+            <li>Range: 260</li>
+            <li>Knockback: 28</li>
+          </ul>
+        </li>
+        <li><b>Diamond Axe</b>
+          <ul>
+            <li>Texture Key: <code style="color: #FFD400;">diamond_axe</code></li>
+            <li>Cooldown: 850 ms</li>
+            <li>Damage: 30</li>
+            <li>Range: 360</li>
+            <li>Knockback: 60</li>
+          </ul>
+        </li>
+        <li><b>Diamond Scythe</b>
+          <ul>
+            <li>Texture Key: <code style="color: #FFD400;">diamond_scythe</code></li>
+            <li>Cooldown: 580 ms</li>
+            <li>Damage: 20</li>
+            <li>Range: 290</li>
+            <li>Knockback: -12</li>
+          </ul>
+        </li>
+        <li><b>Diamond Spear</b>
+          <ul>
+            <li>Texture Key: <code style="color: #FFD400;">diamond_spear</code></li>
+            <li>Cooldown: 540 ms</li>
+            <li>Damage: 12</li>
+            <li>Range: 630</li>
+            <li>Knockback: 12</li>
+          </ul>
+        </li>
+        <li><b>Diamond Kanabo</b>
+          <ul>
+            <li>Texture Key: <code style="color: #FFD400;">diamond_kanabo</code></li>
+            <li>Cooldown: 1080 ms</li>
+            <li>Damage: 44</li>
+            <li>Range: 315</li>
+            <li>Knockback: 65</li>
+          </ul>
+        </li>
+        <li><b>Brimstone Tier</b></li>
+        <li><b>Brimstone Sword</b>
+          <ul>
+            <li>Texture Key: <code style="color: #FFD400;">brimstone_sword</code></li>
+            <li>Cooldown: 460 ms</li>
+            <li>Damage: 20</li>
+            <li>Range: 250</li>
+            <li>Knockback: 35</li>
+          </ul>
+        </li>
+        <li><b>Brimstone Axe</b>
+          <ul>
+            <li>Texture Key: <code style="color: #FFD400;">brimstone_axe</code></li>
+            <li>Cooldown: 950 ms</li>
+            <li>Damage: 38</li>
+            <li>Range: 350</li>
+            <li>Knockback: 70</li>
+          </ul>
+        </li>
+        <li><b>Brimstone Scythe</b>
+          <ul>
+            <li>Texture Key: <code style="color: #FFD400;">brimstone_scythe</code></li>
+            <li>Cooldown: 650 ms</li>
+            <li>Damage: 26</li>
+            <li>Range: 280</li>
+            <li>Knockback: -15</li>
+          </ul>
+        </li>
+        <li><b>Brimstone Spear</b>
+          <ul>
+            <li>Texture Key: <code style="color: #FFD400;">brimstone_spear</code></li>
+            <li>Cooldown: 600 ms</li>
+            <li>Damage: 16</li>
+            <li>Range: 610</li>
+            <li>Knockback: 18</li>
+          </ul>
+        </li>
+        <li><b>Brimstone Kanabo</b>
+          <ul>
+            <li>Texture Key: <code style="color: #FFD400;">brimstone_kanabo</code></li>
+            <li>Cooldown: 1200 ms</li>
+            <li>Damage: 58</li>
+            <li>Range: 310</li>
+            <li>Knockback: 85</li>
+          </ul>
+        </li>
+      </ul>
+
+      <div class="section-title">THE END</div>
+      <ul>
+        <li>Added a new dimension, The End.</li>
+        <li>Added 2 new biomes, The End and Void.</li>
+        <li>Added a new terrain generation system for The End, using the biomes The End and The Void.</li>
+        <li>Added a forcefield around The End's biome, where The End intersects The Void, damaging you and knocking you back onto The End biome.</li>
+        <li>Added a new boss, The Apex, having multiple stages (<b>WILL BE REWORKED!</b>)</li>
+        <li>Added a black portal in the center of The End's island to teleport you back to The Overworld.</li>
+        <li>Added a new item, the brimstone pearl, crafted with 1 vortex pearl and 1 brimstone powder. When right clicked, it puts you through an animation leading to the end dimension.</li>
+      </ul>
+
+      <div class="section-title">GAME SAVES</div>
+      <ul>
+        <li>The game now saves all player, entity, and basic world data in a singleplayer_save.json every 30 seconds or when the player dies or disconnects.</li>
+        <li>World and player data now gets loaded and applied upon joining single player. If the file doesn't exist, it simply creates the world.</li>
+        <li>The player's inventory now gets reset upon death and is given an iron sword. Their health also gets reset to 100.</li>
+      </ul>
+
+      <div class="section-title">NEW TEXTURES/ITEMS</div>
+      <ul>
+        <li><b>Added and updated 40 textures:</b></li>
+        <li>`wooden_sword.png`</li>
+        <li>`wooden_spear.png`</li>
+        <li>`wooden_scythe.png`</li>
+        <li>`wooden_axe.png`</li>
+        <li>`stone_sword.png`</li>
+        <li>`stone_spear.png`</li>
+        <li>`stone_scythe.png`</li>
+        <li>`stone_kanabo.png`</li>
+        <li>`stone_axe.png`</li>
+        <li>`stick.png`</li>
+        <li>`shield.png`</li>
+        <li>`rock.png`</li>
+        <li>`raidshroom.png`</li>
+        <li>`quartz.png`</li>
+        <li>`pearl.png`</li>
+        <li>`iron.png`</li>
+        <li>`iron_sword.png`</li>
+        <li>`iron_spear.png`</li>
+        <li>`iron_scythe.png`</li>
+        <li>`iron_kanabo.png`</li>
+        <li>`iron_axe.png`</li>
+        <li>`diamond.png`</li>
+        <li>`diamond_sword.png`</li>
+        <li>`diamond_spear.png`</li>
+        <li>`diamond_scythe.png`</li>
+        <li>`diamond_kanabo.png`</li>
+        <li>`diamond_axe.png`</li>
+        <li>`copper.png`</li>
+        <li>`copper_sword.png`</li>
+        <li>`copper_spear.png`</li>
+        <li>`copper_scythe.png`</li>
+        <li>`copper_kanabo.png`</li>
+        <li>`copper_axe.png`</li>
+        <li>`brimstone_sword.png`</li>
+        <li>`brimstone_spear.png`</li>
+        <li>`brimstone_scythe.png`</li>
+        <li>`brimstone_powder.png`</li>
+        <li>`brimstone_pearl.png`</li>
+        <li>`brimstone_kanabo.png`</li>
+        <li>`brimstone_axe.png`</li>
+        <li>`vortex/afraid.png`</li>
+        <li>`vortex/angry.png`</li>
+        <li>`vortex/gust.png`</li>
+        <li>`vortex/idle.png`</li>
+      </ul>
+
+      <div class="section-title">NEW SOUNDS</div>
+      <ul>
+        <li><b>Added and updated sounds:</b></li>
+        <li>SOUNDTRACKS:</li>
+        <li>`intense/1.mp3`</li>
+        <li>`calm/1.mp3`</li>
+        <li>`end_animation.mp3`</li>
+        <li>/SOUNDS/AMBIENCE: `brimstone.mp3` `desert.mp3` `raid.mp3` `rain.mp3` `storm.mp3` `volcano.mp3`</li>
+        <li>/SOUNDS/ITEM/BOMB: `explode.mp3` (unused)</li>
+        <li>Credits to @Winter for making the soundtracks (credit in-game will be added in pre-release 2)</li>
+      </ul>
+
+      <div class="section-title">NEW MOBS</div>
+      <ul>
+        <li>The Vortex:
+          <ul>
+            <li>A mob shooting its new `vortex/gust.png` which deals very little damage. It has a small chance to replace raidshroomers during a raid. It also drops a new `Vortex Pearl`.</li>
+          </ul>
+        </li>
+        <li>The Apex:
+          <ul>
+            <li>A mob with multiple stages, changing its appearance and AI on each one. It drops nothing, and only spawns in The End as a final boss. (<b>WILL BE REWORKED</b>)</li>
+          </ul>
+        </li>
+      </ul>
+
+      <div class="section-title">CRAFTING AND INVENTORY</div>
+      <ul>
+        <li>Below the main inventory there is now a place for crafting. The current crafting recepies are:
+          <ul>
+            <li>Brimstone Powder + Vortex Pearl = Brimstone Pearl</li>
+            <li>Any Wood Weapon + Rock = Stone Variant</li>
+            <li>Any Stone Weapon + Copper = Copper Variant</li>
+            <li>Any Copper Weapon + Iron = Iron Variant</li>
+            <li>Any Iron Weapon + Diamond = Diamond Variant</li>
+            <li>Any Diamond Weapon + Brimstone Powder = Brimstone Variant</li>
+          </ul>
+        </li>
+        <li>Added right-click to pick up half the stack in the inventory.</li>
+        <li>Completed raid outposts can now be RIGHT CLICKED to open their chest. Their current loot table is:
+          <ul>
+            <li>All basic ores (Not including brimstone powder)</li>
+            <li>Raidshrooms</li>
+            <li>Vortex Pearls</li>
+            <li>All wood weapons</li>
+            <li>All stone weapons</li>
+          </ul>
+        </li>
+        <li>Updated the inventory from byte-based items to string-based items.</li>
+      </ul>
+
+      <a class="download-btn" href="https://leonardodecapitan.itch.io/bulletbox" target="_blank">
+        Download Pre-Release 1
+      </a>
+
+    </div>
+
+    <a class="discord-btn" href="https://discord.gg/jUuZvfVpAw" target="_blank">
+      <svg class="icon" viewBox="0 0 127.14 96.36" fill="currentColor">
+        <path d="M107.7,8.07A105.15,105.15,0,0,0,77.26,0a77.19,77.19,0,0,0-3.3,6.83A96.67,96.67,0,0,0,53.22,6.83,77.19,77.19,0,0,0,49.88,0,105.15,105.15,0,0,0,19.44,8.07C3.66,31.58-1.86,54.65,1,77.53A105.73,105.73,0,0,0,32,96.36a74.37,74.37,0,0,0,6.71-11,68.6,68.6,0,0,1-10.57-5c.88-.65,1.72-1.33,2.53-2a75.49,75.49,0,0,0,65.78,0c.81.71,1.65,1.39,2.53,2a68.6,68.6,0,0,1-10.57,5,74.37,74.37,0,0,0,6.71,11,105.73,105.73,0,0,0,31-18.83C130.65,49.13,124.71,26.23,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53S36.18,40.36,42.45,40.36,53.87,46,53.87,53,48.72,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.24,60,73.24,53S78.41,40.36,84.69,40.36,96.11,46,96.11,53,91,65.69,84.69,65.69Z"/>
+      </svg>
+      Join the Community Discord
+    </a>
+
+  </div>
+
+</body>
+</html>
