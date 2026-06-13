@@ -1,0 +1,256 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BulletBox Patch Notes - 26.1 Pre-Release 4</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&family=Jersey+10&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #000;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: "Jersey 10", sans-serif;
+      font-weight: 400;
+      color: #fff;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      max-width: 700px;
+      padding: 40px 20px;
+      box-sizing: border-box;
+    }
+
+    .logo {
+      width: 140px;
+      margin-bottom: 10px;
+      image-rendering: pixelated;
+    }
+
+    .title {
+      color: #FFD400;
+      font-size: 54px;
+      letter-spacing: 2px;
+      line-height: 1;
+      text-decoration: none;
+    }
+
+    .subtitle {
+      color: #00d5ff;
+      font-size: 22px;
+      margin-top: 5px;
+      margin-bottom: 35px;
+      opacity: 0.9;
+      text-align: center;
+    }
+
+    .back-btn {
+      color: #00d5ff;
+      font-size: 20px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 20px;
+      align-self: flex-start;
+    }
+
+    .back-btn:hover {
+      text-decoration: underline;
+    }
+
+    .content-box {
+      background: #111;
+      border: 2px solid #222;
+      border-radius: 8px;
+      padding: 25px;
+      margin-bottom: 20px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .patch-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      border-bottom: 2px solid #222;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
+
+    .patch-title {
+      font-size: 32px;
+      color: #FFD400;
+      letter-spacing: 1px;
+    }
+
+    .patch-status {
+      font-size: 20px;
+      color: #ff9500;
+    }
+
+    .section-title {
+      color: #00d5ff;
+      font-size: 24px;
+      margin-top: 20px;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .intro-text {
+      font-size: 19px;
+      line-height: 1.4;
+      color: #eee;
+      margin-bottom: 20px;
+    }
+
+    ul {
+      margin: 0 0 20px 0;
+      padding-left: 20px;
+    }
+
+    ul ul {
+      margin-top: 5px;
+      margin-bottom: 5px;
+      list-style-type: square;
+    }
+
+    li {
+      font-size: 19px;
+      line-height: 1.4;
+      margin-bottom: 8px;
+      color: #eee;
+    }
+
+    .discord-btn {
+      background: #00d5ff;
+      color: #000;
+      padding: 12px 28px;
+      border-radius: 999px;
+      font-size: 20px;
+      text-decoration: none;
+      user-select: none;
+      transition: transform 0.1s ease;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .discord-btn:hover {
+      transform: scale(1.03);
+    }
+
+    .download-btn {
+      background: #FFD400;
+      color: #000;
+      padding: 12px 28px;
+      border-radius: 999px;
+      font-size: 20px;
+      text-decoration: none;
+      user-select: none;
+      transition: transform 0.1s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 18px;
+    }
+
+    .download-btn:hover {
+      transform: scale(1.03);
+    }
+
+    .icon {
+      width: 20px;
+      height: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <img src="logo.png" alt="BulletBox Logo" class="logo">
+
+    <a href="index.html" class="title">BULLETBOX</a>
+    <div class="subtitle">Version 26.1 - Official Release</div>
+
+    <a href="updates.html" class="back-btn">&lt; Back to Patch Notes</a>
+
+    <div class="content-box">
+
+      <div class="patch-header">
+        <div class="patch-title">Bulletbox 26.1 Pre-Release 4</div>
+        <div class="patch-status">Pre-Release</div>
+      </div>
+
+      <div class="intro-text">
+        With this update, we have rewritten the entire world save system to use SQLite instead of JSON files. This fixes a plethora of bugs. Along with this, we have added a few features for world saves. We have also fixed the implementation for version mismatch warnings. We have also compleely rewritten the biome generation.
+      </div>
+
+      <div class="section-title">World Saves</div>
+      <ul>
+        <li>Rewrote the entire world save system to use SQLite instead of JSON files.</li>
+        <li>Added favorited worlds.</li>
+        <li>Fixed the implementation for version mismatch warnings.</li>
+      </ul>
+
+      <div class="section-title">New Textures</div>
+      <ul>
+        <li>Added the following textures to resources/textures/feature/ frozen_tree.png berry_bush.png lilypads.png ice_spike_2.png ice_spike_1.png snow_pile_3.png snow_pile_2.png snow_pile_1.png cactus.png dead_bush.png cherry_tree.png.</li>
+        <li>Updated the textures of resources/textures/ui/inventory/hotbar_active.png and resources/textures/ui/inventory/hotbar_deactive.png.</li>
+        <li>Added the following textures to resources/textures/ui/other/ favorited.png unfavorited.png.</li>
+      </ul>
+
+      <div class="section-title">Biomes and Features</div>
+      <ul>
+        <li>Added the following new biomes: Mesa, Tundra, Frozen Ocea,n Icy Peaks, Swamp, Cherry Grove, and Rocky Beach.</li>
+        <li>Rewrote the biome generation to use Continentalness, Tempature, Humidity, Peaks, River, and Ashen perlin noises to generate biomes.</li>
+        <li>Biomes are now MUCH larger.</li>
+        <li>Mesa and Deserts now feature Cacti and Dead Bushes, Swamps are populated with Lilypads, Cherry Groves finally have their Cherry Trees, and the cold biomes (Tundra, Icy Peaks, Frozen Ocean) are now much more detailed with Frozen Trees, Berry Bushes, Ice Spikes, and varying Snow Piles.</li>
+      </ul>
+
+      <div class="section-title">The Biome Priority System</div>
+      <ul>
+        <li>Biomes follows a strict hierarchy. If a chunk qualifies for multiple biomes, the code picks based on this order:</li>
+        <li>Sea Level: First, it checks continentalness for Oceans and Beaches.</li>
+        <li>Volcanic Override: Then it checks the ashen noise.</li>
+        <li>Hydrography: Then it carves the River.</li>
+        <li>Land Climate: Finally, if none of the above match, it uses peaks, temperature, and humidity to pick the specific land biome.</li>
+      </ul>
+
+      <div class="section-title">Other</div>
+      <ul>
+        <li>Flickers no longer spawn randomly.</li>
+        <li>Added a new track from Winter to the playlist. In-Game Credit is still coming soon.</li>
+      </ul>
+
+      <a class="download-btn" href="https://leonardodecapitan.itch.io/bulletbox" target="_blank">
+        Download for TESTING
+      </a>
+
+    </div>
+
+    <a class="discord-btn" href="https://discord.gg/jUuZvfVpAw" target="_blank">
+      <svg class="icon" viewBox="0 0 127.14 96.36" fill="currentColor">
+        <path d="M107.7,8.07A105.15,105.15,0,0,0,77.26,0a77.19,77.19,0,0,0-3.3,6.83A96.67,96.67,0,0,0,53.22,6.83,77.19,77.19,0,0,0,49.88,0,105.15,105.15,0,0,0,19.44,8.07C3.66,31.58-1.86,54.65,1,77.53A105.73,105.73,0,0,0,32,96.36a74.37,74.37,0,0,0,6.71-11,68.6,68.6,0,0,1-10.57-5c.88-.65,1.72-1.33,2.53-2a75.49,75.49,0,0,0,65.78,0c.81.71,1.65,1.39,2.53,2a68.6,68.6,0,0,1-10.57,5,74.37,74.37,0,0,0,6.71,11,105.73,105.73,0,0,0,31-18.83C130.65,49.13,124.71,26.23,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53S36.18,40.36,42.45,40.36,53.87,46,53.87,53,48.72,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.24,60,73.24,53S78.41,40.36,84.69,40.36,96.11,46,96.11,53,91,65.69,84.69,65.69Z"/>
+      </svg>
+      Join the Community Discord
+    </a>
+
+  </div>
+
+</body>
+</html>
